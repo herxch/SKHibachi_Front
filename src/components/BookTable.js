@@ -1,7 +1,7 @@
-import { useState, useCallback } from "react";
-import BookingConfirm from "./BookingConfirm";
-import PortalPopup from "./PortalPopup";
-import styles from "./BookTable.module.css";
+import { useState, useCallback } from 'react';
+import BookingConfirm from './BookingConfirm';
+import PortalPopup from './PortalPopup';
+import styles from './BookTable.module.css';
 
 const BookTable = ({ onClose }) => {
   const [isBookingConfirmPopupOpen, setBookingConfirmPopupOpen] =
@@ -9,7 +9,12 @@ const BookTable = ({ onClose }) => {
 
   const openBookingConfirmPopup = useCallback(() => {
     setBookingConfirmPopupOpen(true);
-  }, []);
+
+    // 稍后执行onClose
+    setTimeout(() => {
+      onClose();
+    }, 0);
+  }, [onClose]);
 
   const closeBookingConfirmPopup = useCallback(() => {
     setBookingConfirmPopupOpen(false);
@@ -24,14 +29,14 @@ const BookTable = ({ onClose }) => {
             <div className={styles.input}>
               <b className={styles.firstName}>First name</b>
               <div className={styles.iconUserParent}>
-                <img className={styles.iconUser} alt="" src="/-icon-user.svg" />
+                <img className={styles.iconUser} alt='' src='/-icon-user.svg' />
                 <div className={styles.i}>I</div>
               </div>
             </div>
             <div className={styles.input}>
               <b className={styles.firstName}>Last Name</b>
               <div className={styles.iconUserParent}>
-                <img className={styles.iconUser} alt="" src="/-icon-user.svg" />
+                <img className={styles.iconUser} alt='' src='/-icon-user.svg' />
                 <div className={styles.i}>I</div>
               </div>
             </div>
@@ -42,8 +47,8 @@ const BookTable = ({ onClose }) => {
               <div className={styles.iconUserParent}>
                 <img
                   className={styles.iconEnvelope}
-                  alt=""
-                  src="/-icon-envelope.svg"
+                  alt=''
+                  src='/-icon-envelope.svg'
                 />
                 <div className={styles.i}>I</div>
               </div>
@@ -53,8 +58,8 @@ const BookTable = ({ onClose }) => {
               <div className={styles.iconUserParent}>
                 <img
                   className={styles.iconPhone}
-                  alt=""
-                  src="/-icon-phone.svg"
+                  alt=''
+                  src='/-icon-phone.svg'
                 />
                 <div className={styles.i}>I</div>
               </div>
@@ -66,8 +71,8 @@ const BookTable = ({ onClose }) => {
               <div className={styles.iconUserParent}>
                 <img
                   className={styles.iconCalendar}
-                  alt=""
-                  src="/-icon-calendar.svg"
+                  alt=''
+                  src='/-icon-calendar.svg'
                 />
                 <div className={styles.i}>I</div>
               </div>
@@ -77,8 +82,8 @@ const BookTable = ({ onClose }) => {
               <div className={styles.iconUserParent}>
                 <img
                   className={styles.iconPhone}
-                  alt=""
-                  src="/-icon-time.svg"
+                  alt=''
+                  src='/-icon-time.svg'
                 />
                 <div className={styles.i}>I</div>
               </div>
@@ -90,8 +95,8 @@ const BookTable = ({ onClose }) => {
               <div className={styles.iconUserParent}>
                 <img
                   className={styles.iconUserGroup1}
-                  alt=""
-                  src="/-icon-user-group.svg"
+                  alt=''
+                  src='/-icon-user-group.svg'
                 />
                 <div className={styles.i}>I</div>
               </div>
@@ -102,8 +107,8 @@ const BookTable = ({ onClose }) => {
             <div className={styles.dollarSymbolParent}>
               <img
                 className={styles.dollarSymbolIcon}
-                alt=""
-                src="/dollar-symbol.svg"
+                alt=''
+                src='/dollar-symbol.svg'
               />
               <div className={styles.i}> I</div>
             </div>
@@ -113,8 +118,8 @@ const BookTable = ({ onClose }) => {
             <div className={styles.dollarSymbolGroup}>
               <img
                 className={styles.dollarSymbolIcon}
-                alt=""
-                src="/dollar-symbol.svg"
+                alt=''
+                src='/dollar-symbol.svg'
               />
               <div className={styles.i}> I</div>
             </div>
@@ -126,8 +131,8 @@ const BookTable = ({ onClose }) => {
       </div>
       {isBookingConfirmPopupOpen && (
         <PortalPopup
-          overlayColor="rgba(255, 255, 255, 0.9)"
-          placement="Centered"
+          overlayColor='rgba(0, 0, 0, 0.9)'
+          placement='Centered'
           onOutsideClick={closeBookingConfirmPopup}
         >
           <BookingConfirm onClose={closeBookingConfirmPopup} />

@@ -1,7 +1,7 @@
-import { useState, useCallback } from "react";
-import BookTable from "./BookTable";
-import PortalPopup from "./PortalPopup";
-import styles from "./BookingFormContainer.module.css";
+import { useState, useCallback } from 'react';
+import BookTable from './BookTable';
+import PortalPopup from './PortalPopup';
+import styles from './BookingFormContainer.module.css';
 
 const BookingFormContainer = () => {
   const [isBookTablePopup1Open, setBookTablePopup1Open] = useState(false);
@@ -20,7 +20,7 @@ const BookingFormContainer = () => {
         <div className={styles.gallerySectionChild} />
         <div className={styles.bookWrapper}>
           <div className={styles.button4} onClick={openBookTablePopup1}>
-            <img className={styles.vectorIcon} alt="" src="/vector2.svg" />
+            <img className={styles.vectorIcon} alt='' src='/vector2.svg' />
             <h3 className={styles.bookNow}>BOOK NOW</h3>
           </div>
           <h3 className={styles.weCoverAll}>We cover all State of Taxes!</h3>
@@ -28,8 +28,8 @@ const BookingFormContainer = () => {
             <div className={styles.logoWrapperChild} />
             <img
               className={styles.skCuber31}
-              alt=""
-              src="/sk-cuber-3-1@2x.png"
+              alt=''
+              src='/sk-cuber-3-1@2x.png'
             />
           </div>
         </div>
@@ -43,14 +43,14 @@ const BookingFormContainer = () => {
         </div>
         <img
           className={styles.photoWrapperIcon}
-          alt=""
-          src="/photowrapper@2x.png"
+          alt=''
+          src='/photowrapper@2x.png'
         />
       </section>
       {isBookTablePopup1Open && (
         <PortalPopup
-          overlayColor="rgba(255, 255, 255, 0.9)"
-          placement="Centered"
+          overlayColor='rgba(0, 0, 0, 0.9)'
+          placement='Centered'
           onOutsideClick={closeBookTablePopup1}
         >
           <BookTable onClose={closeBookTablePopup1} />

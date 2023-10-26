@@ -14,10 +14,10 @@
 .videoheaderWrapper {
   position: absolute;
   margin: 0 !important;
-  left: 2.06rem;
+  left: 16.06rem;
 }
 .videoheaderWrapper {
-  top: 1.13rem;
+  top: 2.13rem;
   width: 76.56rem;
   display: flex;
   flex-direction: column;
@@ -28,7 +28,7 @@
   z-index: 0;
 }
 .letYourFamily {
-  top: 11.38rem;
+  top: 12.38rem;
   font-size: var(--font-size-13xl);
   line-height: 140%;
   z-index: 1;
@@ -41,7 +41,8 @@
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  background-image: url(/public/videosection@3x.png);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #332f2e;
+  /* background-image: url(/public/videosection@3x.png); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;

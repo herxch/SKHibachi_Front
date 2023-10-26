@@ -1,7 +1,7 @@
-import { useState, useCallback } from "react";
-import BookTable from "./BookTable";
-import PortalPopup from "./PortalPopup";
-import styles from "./Header.module.css";
+import { useState, useCallback } from 'react';
+import BookTable from './BookTable';
+import PortalPopup from './PortalPopup';
+import styles from './Header.module.css';
 
 const Header = () => {
   const [isBookTablePopupOpen, setBookTablePopupOpen] = useState(false);
@@ -19,13 +19,13 @@ const Header = () => {
       <header className={styles.navBar}>
         <div className={styles.leftButton}>
           <button className={styles.button3} onClick={openBookTablePopup}>
-            <img className={styles.vectorIcon} alt="" src="/vector.svg" />
+            <img className={styles.vectorIcon} alt='' src='/vector.svg' />
             <b className={styles.appointment}>APPOINTMENT</b>
           </button>
           <div className={styles.hamburger}>
-            <img className={styles.vectorIcon1} alt="" src="/vector1.svg" />
-            <img className={styles.vectorIcon1} alt="" src="/vector1.svg" />
-            <img className={styles.vectorIcon1} alt="" src="/vector1.svg" />
+            <img className={styles.vectorIcon1} alt='' src='/vector1.svg' />
+            <img className={styles.vectorIcon1} alt='' src='/vector1.svg' />
+            <img className={styles.vectorIcon1} alt='' src='/vector1.svg' />
           </div>
         </div>
         <nav className={styles.menuButton}>
@@ -42,8 +42,8 @@ const Header = () => {
       </header>
       {isBookTablePopupOpen && (
         <PortalPopup
-          overlayColor="rgba(255, 255, 255, 0.9)"
-          placement="Centered"
+          overlayColor='rgba(0, 0, 0, 0.9)'
+          placement='Centered'
           onOutsideClick={closeBookTablePopup}
         >
           <BookTable onClose={closeBookTablePopup} />
