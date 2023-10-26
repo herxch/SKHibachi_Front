@@ -1,0 +1,42 @@
+.navLogoChild {
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--common-0-white);
+  width: 11rem;
+  height: 11.06rem;
+  z-index: 0;
+}
+.skCuber31 {
+  position: absolute;
+  margin: 0 !important;
+  top: 0.63rem;
+  left: 0.63rem;
+  width: 9.75rem;
+  height: 9.75rem;
+  object-fit: cover;
+  z-index: 1;
+}
+.bodyWrapper,
+.navLogo {
+  display: flex;
+  align-items: center;
+}
+.navLogo {
+  margin: 0 !important;
+  position: absolute;
+  top: 0.63rem;
+  left: 3.75rem;
+  width: 11rem;
+  height: 11rem;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 6;
+}
+.bodyWrapper {
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0 12.19rem;
+  box-sizing: border-box;
+}

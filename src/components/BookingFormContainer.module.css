@@ -1,0 +1,129 @@
+.gallerySectionChild {
+  width: 100%;
+  position: relative;
+  border-top: 4px solid var(--common-0-white);
+  box-sizing: border-box;
+  height: 0.25rem;
+  max-width: 90rem;
+}
+.vectorIcon {
+  position: relative;
+  width: 2.25rem;
+  height: 2.44rem;
+}
+.bookNow {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  line-height: 140%;
+  font-weight: 700;
+  font-family: inherit;
+}
+.button4 {
+  border-radius: var(--br-81xl);
+  background-color: var(--color-crimson-100);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--color-crimson-100);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-13xl) var(--padding-45xl);
+  gap: var(--gap-13xl);
+  cursor: pointer;
+}
+.weCoverAll {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  line-height: 140%;
+  font-weight: 700;
+  font-family: inherit;
+}
+.logoWrapperChild {
+  position: relative;
+  border-radius: 50%;
+  background-color: var(--common-0-white);
+  width: 25.81rem;
+  height: 25.88rem;
+  z-index: 0;
+}
+.skCuber31 {
+  position: absolute;
+  margin: 0 !important;
+  top: 1.25rem;
+  left: 1.22rem;
+  width: 23.31rem;
+  height: 23.31rem;
+  object-fit: cover;
+  z-index: 1;
+}
+.bookWrapper,
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logoWrapper {
+  flex-direction: row;
+  position: relative;
+}
+.bookWrapper {
+  align-self: stretch;
+  flex-direction: column;
+  padding: var(--padding-45xl);
+  gap: var(--gap-101xl);
+}
+.contactUs {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-45xl);
+  line-height: 140%;
+  font-weight: 700;
+  font-family: inherit;
+}
+.contactInfo {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-13xl);
+}
+.photoWrapperIcon {
+  align-self: stretch;
+  max-width: 100%;
+  overflow: hidden;
+  height: 81.88rem;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.gallerySection {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-45xl);
+  background-image: url(/public/gallerysection@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 4;
+  text-align: center;
+  font-size: var(--font-size-29xl);
+  color: var(--common-0-white);
+  font-family: var(--px-regular);
+}
+@media screen and (max-width: 960px) {
+  .photoWrapperIcon {
+    align-self: stretch;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

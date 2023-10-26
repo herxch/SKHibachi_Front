@@ -1,0 +1,104 @@
+.vectorIcon {
+  position: relative;
+  width: 1.38rem;
+  height: 1.44rem;
+}
+.appointment {
+  position: relative;
+  font-size: var(--font-size-5xl);
+  line-height: 140%;
+  font-family: var(--px-regular);
+  color: var(--common-0-white);
+  text-align: center;
+}
+.button3 {
+  cursor: pointer;
+  border: 2px solid var(--color-crimson-100);
+  padding: var(--padding-5xs) var(--padding-5xl);
+  background-color: var(--color-crimson-100);
+  border-radius: var(--br-81xl);
+  box-sizing: border-box;
+  width: 18rem;
+  height: 3.94rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-5xl);
+}
+.vectorIcon1 {
+  position: relative;
+  width: 2.92rem;
+  height: 0.31rem;
+}
+.hamburger,
+.leftButton {
+  align-items: center;
+  justify-content: center;
+}
+.hamburger {
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+.leftButton {
+  display: flex;
+  flex-direction: row;
+  gap: var(--gap-61xl);
+  z-index: 0;
+}
+.menu {
+  position: relative;
+  line-height: 140%;
+}
+.button,
+.button2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menuButton,
+.navBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.menuButton {
+  margin: 0 !important;
+  position: absolute;
+  top: 2.19rem;
+  left: calc(50% - 1046px);
+  width: 120.69rem;
+  justify-content: center;
+  gap: var(--gap-141xl);
+  z-index: 1;
+  text-align: center;
+  font-size: var(--font-size-17xl);
+  color: var(--common-0-white);
+  font-family: var(--px-regular);
+}
+.navBar {
+  align-self: stretch;
+  background-color: var(--color-gray-200);
+  height: 7.5rem;
+  justify-content: flex-end;
+  padding: var(--padding-5xl) var(--padding-61xl);
+  box-sizing: border-box;
+  position: relative;
+  gap: var(--gap-61xl);
+  z-index: 0;
+}
+@media screen and (max-width: 960px) {
+  .hamburger {
+    display: flex;
+  }
+  .menuButton {
+    display: none;
+  }
+  .navBar {
+    gap: var(--gap-61xl);
+  }
+}

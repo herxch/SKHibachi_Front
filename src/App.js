@@ -1,25 +1,52 @@
-import { NavBar } from './components/NavBar';
+import { useEffect } from "react";
+import {
+  Routes,
+  Route,
+  useNavigationType,
+  useLocation,
+} from "react-router-dom";
+import BodyWrapper from "./pages/BodyWrapper";
 
 function App() {
+  const action = useNavigationType();
+  const location = useLocation();
+  const pathname = location.pathname;
+
+  useEffect(() => {
+    if (action !== "POP") {
+      window.scrollTo(0, 0);
+    }
+  }, [action, pathname]);
+
+  useEffect(() => {
+    let title = "";
+    let metaDescription = "";
+
+    switch (pathname) {
+      case "/":
+        title = "SK Hibachi";
+        metaDescription = "Hibachi";
+        break;
+    }
+
+    if (title) {
+      document.title = title;
+    }
+
+    if (metaDescription) {
+      const metaDescriptionTag = document.querySelector(
+        'head > meta[name="description"]'
+      );
+      if (metaDescriptionTag) {
+        metaDescriptionTag.content = metaDescription;
+      }
+    }
+  }, [pathname]);
+
   return (
-    <div className='App'>
-      <NavBar />
-      <video
-        autoPlay
-        loop
-        muted
-        style={{
-          // position: "fixed",
-          width: '100%',
-          // left: 0,
-          // top: 0,
-        }}
-      >
-        <source src='/VideoHeader.mp4' type='video/mp4' />
-        Your browser does not support the video tag.
-      </video>
-    </div>
+    <Routes>
+      <Route path="/" element={<BodyWrapper />} />
+    </Routes>
   );
 }
-
 export default App;

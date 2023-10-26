@@ -1,0 +1,188 @@
+.bookTable {
+  position: relative;
+  line-height: 140%;
+}
+.firstName {
+  align-self: stretch;
+  line-height: 140%;
+}
+.firstName,
+.i,
+.iconUser {
+  position: relative;
+}
+.iconUser {
+  width: 16px;
+  height: 16px;
+}
+.i {
+  flex: 1;
+  line-height: 140%;
+}
+.iconUserParent,
+.input,
+.name {
+  display: flex;
+  align-items: center;
+}
+.iconUserParent {
+  align-self: stretch;
+  border-radius: var(--br-31xl);
+  background-color: var(--common-0-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--common-4-field);
+  box-sizing: border-box;
+  height: 57px;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-base);
+  gap: var(--gap-5xs);
+  font-size: var(--px-regular-size);
+  color: var(--color-black);
+}
+.input,
+.name {
+  justify-content: center;
+}
+.input {
+  width: 320px;
+  height: 89px;
+  flex-direction: column;
+  gap: var(--gap-5xs);
+}
+.name {
+  flex-direction: row;
+  padding: 0 var(--padding-5xl);
+  gap: var(--gap-45xl);
+}
+.iconEnvelope,
+.iconPhone {
+  position: relative;
+  width: 15px;
+  height: 12px;
+}
+.iconPhone {
+  width: 13px;
+  height: 13px;
+}
+.iconCalendar,
+.iconUserGroup1 {
+  position: relative;
+  width: 13px;
+  height: 14.4px;
+}
+.iconUserGroup1 {
+  height: 14px;
+}
+.inputWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--padding-5xl);
+}
+.dollarSymbolIcon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: none;
+}
+.dollarSymbolParent {
+  align-self: stretch;
+  border-radius: var(--br-31xl);
+  background-color: var(--common-0-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--common-4-field);
+  box-sizing: border-box;
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-xs) var(--padding-base);
+  gap: var(--gap-5xs);
+  font-size: var(--px-regular-size);
+  color: var(--color-black);
+}
+.homeaddress {
+  width: 720px;
+  height: 87px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dollarSymbolGroup,
+.homeaddress,
+.message {
+  justify-content: flex-start;
+  gap: var(--gap-5xs);
+}
+.dollarSymbolGroup {
+  align-self: stretch;
+  border-radius: var(--br-31xl);
+  background-color: var(--common-0-white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid var(--common-4-field);
+  box-sizing: border-box;
+  height: 129px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: var(--padding-xs) var(--padding-base);
+  font-size: var(--px-regular-size);
+  color: var(--color-black);
+}
+.message {
+  width: 720px;
+  height: 161px;
+  flex-direction: column;
+}
+.booktable,
+.button,
+.form,
+.message {
+  display: flex;
+  align-items: center;
+}
+.form {
+  height: 792px;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--padding-base);
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  font-size: var(--font-size-xl);
+  color: var(--color-gray-100);
+}
+.booktable,
+.button {
+  border-radius: var(--br-31xl);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+.button {
+  background-color: var(--color-crimson-100);
+  flex-direction: row;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-45xl);
+  cursor: pointer;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: #f5f5f5;
+}
+.booktable {
+  background-color: var(--color-gray-300);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-45xl);
+  box-sizing: border-box;
+  gap: var(--gap-45xl);
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--px-regular);
+}

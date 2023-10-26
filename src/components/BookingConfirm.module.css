@@ -1,0 +1,49 @@
+.thankYouSo {
+  position: relative;
+  line-height: 140%;
+  text-align: left;
+}
+.ourCustomerServise {
+  margin: 0;
+}
+.ourCustomerServiseContainer {
+  font-size: var(--px-regular-size);
+  color: #928b8b;
+}
+.gotIt,
+.ourCustomerServiseContainer {
+  position: relative;
+  line-height: 140%;
+}
+.bookingconfirm,
+.button {
+  border-radius: var(--br-31xl);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.button {
+  background-color: var(--color-crimson-100);
+  width: 120px;
+  flex-direction: row;
+  justify-content: center;
+  padding: var(--padding-5xs) var(--padding-base);
+  cursor: pointer;
+  font-size: var(--font-size-5xl);
+  color: var(--common-0-white);
+}
+.bookingconfirm {
+  background-color: var(--color-gray-300);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-45xl);
+  gap: var(--gap-45xl);
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto;
+  text-align: center;
+  font-size: var(--font-size-13xl);
+  color: var(--color-gray-100);
+  font-family: var(--px-regular);
+}

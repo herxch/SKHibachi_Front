@@ -1,0 +1,28 @@
+.copyright2023SkHibachi {
+  flex: 1;
+  position: relative;
+  line-height: 140%;
+}
+.copyright,
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.copyright {
+  flex: 1;
+}
+.footer {
+  align-self: stretch;
+  background-color: var(--color-gray-200);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  height: 4.75rem;
+  padding: var(--padding-5xl) var(--padding-101xl);
+  box-sizing: border-box;
+  z-index: 5;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--common-0-white);
+  font-family: var(--px-regular);
+}
