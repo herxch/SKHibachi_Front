@@ -1,4 +1,5 @@
 import styles from './VideoSection.module.css';
+import video from '../assets/VideoHeader.mp4';
 
 const VideoSection = () => {
   return (
@@ -14,7 +15,7 @@ const VideoSection = () => {
           // top: 0,
         }}
       >
-        <source src='/VideoHeader.mp4' type='video/mp4' />
+        <source src={video} type='video/mp4' />
         Your browser does not support the video tag.
       </video>
       <div className={styles.videoheaderWrapper}>
