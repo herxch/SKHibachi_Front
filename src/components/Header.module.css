@@ -1,9 +1,54 @@
-.vectorIcon {
+.bellicon,
+.book {
   position: relative;
-  width: 1.38rem;
-  height: 1.44rem;
 }
-.appointment {
+.bellicon {
+  width: 1rem;
+  height: 1rem;
+}
+.book {
+  font-size: var(--px-regular-size);
+  line-height: 140%;
+  font-family: var(--px-regular);
+  color: var(--common-0-white);
+  text-align: left;
+}
+.bookbutton {
+  cursor: pointer;
+  border: 2px solid var(--color-crimson-100);
+  padding: var(--padding-5xs);
+  background-color: var(--color-crimson-100);
+  margin: 0 !important;
+  position: absolute;
+  top: 1.75rem;
+  right: 8.84rem;
+  border-radius: var(--br-81xl);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  min-width: 6.25rem;
+  max-width: 8.75rem;
+  z-index: 0;
+}
+.hamline1Icon {
+  position: relative;
+  width: 2.92rem;
+  height: 0.31rem;
+}
+.hamburger {
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  cursor: pointer;
+  z-index: 1;
+}
+.menu1 {
   position: relative;
   font-size: var(--font-size-5xl);
   line-height: 140%;
@@ -11,85 +56,53 @@
   color: var(--common-0-white);
   text-align: center;
 }
-.button3 {
-  cursor: pointer;
-  border: 2px solid var(--color-crimson-100);
-  padding: var(--padding-5xs) var(--padding-5xl);
-  background-color: var(--color-crimson-100);
-  border-radius: var(--br-81xl);
-  box-sizing: border-box;
-  width: 18rem;
-  height: 3.94rem;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: var(--gap-5xl);
-}
-.vectorIcon1 {
-  position: relative;
-  width: 2.92rem;
-  height: 0.31rem;
-}
-.hamburger,
-.leftButton {
-  align-items: center;
-  justify-content: center;
-}
-.hamburger {
-  overflow: hidden;
-  display: none;
-  flex-direction: column;
-  gap: var(--gap-xs);
-}
-.leftButton {
-  display: flex;
-  flex-direction: row;
-  gap: var(--gap-61xl);
-  z-index: 0;
-}
-.menu {
-  position: relative;
-  line-height: 140%;
-}
-.button,
-.button2 {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+.menu,
 .menuButton,
-.navBar {
+.story {
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: center;
+}
+.menu,
+.story {
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  align-self: stretch;
+  flex-direction: column;
 }
 .menuButton {
-  margin: 0 !important;
-  position: absolute;
-  top: 2.19rem;
-  left: calc(50% - 1046px);
-  width: 120.69rem;
-  justify-content: center;
+  margin: 0;
+  flex: 1;
+  flex-direction: row;
   gap: var(--gap-141xl);
-  z-index: 1;
-  text-align: center;
-  font-size: var(--font-size-17xl);
-  color: var(--common-0-white);
-  font-family: var(--px-regular);
+  z-index: 2;
 }
-.navBar {
+.logoIcon {
+  position: absolute;
+  margin: 0 !important;
+  top: 1.25rem;
+  left: 3.13rem;
+  width: 10.5rem;
+  height: 10.5rem;
+  object-fit: cover;
+  z-index: 3;
+}
+.navbar {
+  margin: 0;
   align-self: stretch;
-  background-color: var(--color-gray-200);
-  height: 7.5rem;
-  justify-content: flex-end;
-  padding: var(--padding-5xl) var(--padding-61xl);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #332f2e;
+  height: 6.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-6xl) var(--padding-508xl);
   box-sizing: border-box;
   position: relative;
-  gap: var(--gap-61xl);
-  z-index: 0;
+  gap: var(--gap-3xs);
+  min-height: 6.25rem;
 }
 @media screen and (max-width: 960px) {
   .hamburger {
@@ -98,7 +111,35 @@
   .menuButton {
     display: none;
   }
-  .navBar {
-    gap: var(--gap-61xl);
+}
+@media screen and (max-width: 420px) {
+  .bellicon {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  .bellicon,
+  .book {
+    display: flex;
+  }
+  .bookbutton,
+  .hamburger {
+    display: flex;
+    position: absolute;
+  }
+  .bookbutton {
+    width: 5.5rem;
+    height: 1.25rem;
+    left: 10rem;
+  }
+  .hamburger {
+    left: 2.5rem;
+    top: 2.5rem;
+  }
+  .menuButton {
+    display: none;
+  }
+  .logoIcon {
+    width: 5.5rem;
+    height: 5.5rem;
   }
 }

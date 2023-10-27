@@ -1,7 +1,7 @@
-import { useState, useCallback } from 'react';
-import BookingConfirm from './BookingConfirm';
-import PortalPopup from './PortalPopup';
-import styles from './BookTable.module.css';
+import { useState, useCallback } from "react";
+import BookingConfirm from "./BookingConfirm";
+import PortalPopup from "./PortalPopup";
+import styles from "./BookTable.module.css";
 
 const BookTable = ({ onClose }) => {
   const [isBookingConfirmPopupOpen, setBookingConfirmPopupOpen] =
@@ -9,12 +9,7 @@ const BookTable = ({ onClose }) => {
 
   const openBookingConfirmPopup = useCallback(() => {
     setBookingConfirmPopupOpen(true);
-
-    // 稍后执行onClose
-    setTimeout(() => {
-      onClose();
-    }, 0);
-  }, [onClose]);
+  }, []);
 
   const closeBookingConfirmPopup = useCallback(() => {
     setBookingConfirmPopupOpen(false);
@@ -23,116 +18,78 @@ const BookTable = ({ onClose }) => {
   return (
     <>
       <div className={styles.booktable}>
-        <b className={styles.bookTable}>BOOK TABLE</b>
-        <div className={styles.form}>
-          <div className={styles.name}>
-            <div className={styles.input}>
-              <b className={styles.firstName}>First name</b>
-              <div className={styles.iconUserParent}>
-                <img className={styles.iconUser} alt='' src='/-icon-user.svg' />
-                <div className={styles.i}>I</div>
-              </div>
-            </div>
-            <div className={styles.input}>
-              <b className={styles.firstName}>Last Name</b>
-              <div className={styles.iconUserParent}>
-                <img className={styles.iconUser} alt='' src='/-icon-user.svg' />
-                <div className={styles.i}>I</div>
-              </div>
+        <h1 className={styles.appointment}>Appointment</h1>
+        <main className={styles.form}>
+          <div className={styles.firstname}>
+            <label className={styles.firstName}>First name</label>
+            <div className={styles.inputwrapper}>
+              <img className={styles.userIcon} alt="" src="/user.svg" />
+              <input className={styles.firstname1} type="text" />
             </div>
           </div>
-          <div className={styles.name}>
-            <div className={styles.input}>
-              <b className={styles.firstName}>Email Address</b>
-              <div className={styles.iconUserParent}>
-                <img
-                  className={styles.iconEnvelope}
-                  alt=''
-                  src='/-icon-envelope.svg'
-                />
-                <div className={styles.i}>I</div>
-              </div>
-            </div>
-            <div className={styles.input}>
-              <b className={styles.firstName}>Phone #</b>
-              <div className={styles.iconUserParent}>
-                <img
-                  className={styles.iconPhone}
-                  alt=''
-                  src='/-icon-phone.svg'
-                />
-                <div className={styles.i}>I</div>
-              </div>
+          <div className={styles.firstname}>
+            <label className={styles.firstName}>Last Name</label>
+            <div className={styles.inputwrapper}>
+              <img className={styles.userIcon} alt="" src="/user.svg" />
+              <input className={styles.firstname1} type="text" />
             </div>
           </div>
-          <div className={styles.name}>
-            <div className={styles.input}>
-              <b className={styles.firstName}>Date</b>
-              <div className={styles.iconUserParent}>
-                <img
-                  className={styles.iconCalendar}
-                  alt=''
-                  src='/-icon-calendar.svg'
-                />
-                <div className={styles.i}>I</div>
-              </div>
-            </div>
-            <div className={styles.input}>
-              <b className={styles.firstName}>Time</b>
-              <div className={styles.iconUserParent}>
-                <img
-                  className={styles.iconPhone}
-                  alt=''
-                  src='/-icon-time.svg'
-                />
-                <div className={styles.i}>I</div>
-              </div>
+          <div className={styles.firstname}>
+            <label className={styles.firstName}>Email Address</label>
+            <div className={styles.inputwrapper}>
+              <img className={styles.evelopeIcon} alt="" src="/evelope.svg" />
+              <input className={styles.firstname1} type="text" />
             </div>
           </div>
-          <div className={styles.inputWrapper}>
-            <div className={styles.input}>
-              <b className={styles.firstName}>How many</b>
-              <div className={styles.iconUserParent}>
-                <img
-                  className={styles.iconUserGroup1}
-                  alt=''
-                  src='/-icon-user-group.svg'
-                />
-                <div className={styles.i}>I</div>
-              </div>
+          <div className={styles.firstname}>
+            <label className={styles.firstName}>Phone #</label>
+            <div className={styles.inputwrapper}>
+              <img className={styles.phoneIcon} alt="" src="/phone.svg" />
+              <input className={styles.calendar} type="text" />
             </div>
           </div>
-          <div className={styles.homeaddress}>
-            <b className={styles.firstName}>Home Address</b>
-            <div className={styles.dollarSymbolParent}>
-              <img
-                className={styles.dollarSymbolIcon}
-                alt=''
-                src='/dollar-symbol.svg'
-              />
-              <div className={styles.i}> I</div>
+          <div className={styles.firstname}>
+            <label className={styles.firstName}>Date</label>
+            <div className={styles.inputwrapper}>
+              <img className={styles.calendarIcon} alt="" src="/calendar.svg" />
+              <input className={styles.calendar} type="text" />
+            </div>
+          </div>
+          <div className={styles.firstname}>
+            <label className={styles.firstName}>Time</label>
+            <div className={styles.inputwrapper}>
+              <img className={styles.phoneIcon} alt="" src="/time.svg" />
+              <input className={styles.calendar} type="text" />
+            </div>
+          </div>
+          <div className={styles.people}>
+            <label className={styles.firstName}>How many people</label>
+            <div className={styles.inputwrapper}>
+              <img className={styles.groupIcon} alt="" src="/group.svg" />
+              <input className={styles.calendar} type="text" />
+            </div>
+          </div>
+          <div className={styles.address}>
+            <label className={styles.firstName}>Home Address</label>
+            <div className={styles.inputwrapper7}>
+              <input className={styles.calendar} type="text" />
             </div>
           </div>
           <div className={styles.message}>
-            <b className={styles.firstName}>Message to chef #</b>
-            <div className={styles.dollarSymbolGroup}>
-              <img
-                className={styles.dollarSymbolIcon}
-                alt=''
-                src='/dollar-symbol.svg'
-              />
-              <div className={styles.i}> I</div>
+            <label className={styles.firstName}>{`Message to chef `}</label>
+            <div className={styles.inputwrapper8}>
+              <input className={styles.firstname1} type="text" />
             </div>
           </div>
-        </div>
-        <div className={styles.button} onClick={openBookingConfirmPopup}>
-          <b className={styles.bookTable}>Submit</b>
-        </div>
+        </main>
+        <button className={styles.submit} onClick={openBookingConfirmPopup}>
+          <h3 className={styles.submit1}>Submit</h3>
+        </button>
       </div>
       {isBookingConfirmPopupOpen && (
         <PortalPopup
-          overlayColor='rgba(0, 0, 0, 0.9)'
-          placement='Centered'
+          overlayColor="rgba(113, 113, 113, 0.9)"
+          placement="Centered"
           onOutsideClick={closeBookingConfirmPopup}
         >
           <BookingConfirm onClose={closeBookingConfirmPopup} />

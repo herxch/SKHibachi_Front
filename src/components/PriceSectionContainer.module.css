@@ -1,4 +1,4 @@
-.priceSectionChild {
+.priceseparateline {
   width: 100%;
   position: relative;
   border-top: 4px solid var(--common-0-white);
@@ -6,8 +6,16 @@
   height: 0.25rem;
   max-width: 90rem;
 }
-.b {
+.span {
+  text-decoration: line-through;
+}
+.b,
+.span1 {
+  font-family: var(--px-regular);
   color: var(--color-crimson-200);
+}
+.span1 {
+  color: var(--common-0-white);
 }
 .personNow50Container {
   margin: 0;
@@ -20,15 +28,14 @@
   z-index: 0;
   font-family: inherit;
 }
-.priceHeaderChild {
-  flex: 1;
+.strikethroughlineIcon {
   position: absolute;
   margin: 0 !important;
-  top: 2.65rem;
-  left: -0.16rem;
-  max-width: 100%;
-  overflow: hidden;
-  height: 3.62rem;
+  top: 1.31rem;
+  left: 18.31rem;
+  width: 4.07rem;
+  height: 1.91rem;
+  display: none;
   z-index: 1;
 }
 .priceHeader {
@@ -39,8 +46,6 @@
   justify-content: center;
   position: relative;
   gap: var(--gap-3xs);
-  text-align: center;
-  font-size: var(--font-size-77xl);
 }
 .howItWorks {
   margin: 0;
@@ -51,120 +56,143 @@
   font-family: inherit;
 }
 .bookAPrivate,
-.priceDRChild {
+.howitworksline {
   align-self: stretch;
   position: relative;
 }
-.priceDRChild {
-  border-top: 4px solid var(--common-0-white);
+.howitworksline {
+  border-top: 2px solid var(--common-0-white);
   box-sizing: border-box;
-  height: 0.25rem;
+  height: 0.13rem;
 }
 .bookAPrivate {
+  margin: 0;
+  font-size: var(--font-size-xl);
   line-height: 200%;
-}
-.priceDRP {
-  align-self: stretch;
-  flex-direction: column;
-  justify-content: center;
-  padding: var(--padding-base) var(--padding-45xl);
   text-align: center;
-  font-size: var(--font-size-29xl);
-}
-.priceDR,
-.priceDRP,
-.priceDetails {
-  display: flex;
-  align-items: center;
 }
 .priceDR {
-  flex: 1;
-  border-radius: var(--br-31xl);
-  background-color: var(--color-gray-400);
-  border: 4px solid var(--common-0-white);
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: var(--padding-45xl) var(--padding-13xl);
-  gap: var(--gap-45xl);
-}
-.priceDetails {
   width: 100%;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0 var(--padding-101xl);
+  border-radius: var(--br-31xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: var(--padding-13xl);
   box-sizing: border-box;
-  max-width: 120rem;
+  gap: var(--gap-13xl);
+  background-image: url(/public/pricedr@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 50rem;
 }
-.span {
+.span2 {
   font-weight: 800;
   font-family: var(--px-regular);
 }
 .minimumForAllParties {
-  margin: 0;
+  display: block;
 }
 .lobsterTail {
   font-family: var(--px-regular);
 }
 .minimumForAllContainer {
+  margin: 0;
   align-self: stretch;
   position: relative;
-  line-height: 140%;
+  font-size: var(--font-size-5xl);
+  letter-spacing: 0.02em;
+  line-height: 120%;
   white-space: pre-wrap;
+  text-align: center;
 }
 .priceDR1,
-.priceDRP1,
+.priceDetails,
 .priceSection {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.priceDRP1 {
-  align-self: stretch;
-  justify-content: center;
-  padding: var(--padding-base);
-  text-align: center;
-  font-size: var(--font-size-29xl);
-}
-.priceDR1,
-.priceSection {
-  justify-content: flex-start;
-}
 .priceDR1 {
-  flex: 1;
+  width: 100%;
   border-radius: var(--br-31xl);
-  background-color: var(--color-gray-400);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-  border: 4px solid var(--common-0-white);
-  padding: var(--padding-45xl) var(--padding-13xl);
-  gap: var(--gap-45xl);
+  justify-content: flex-start;
+  padding: var(--padding-13xl);
+  box-sizing: border-box;
+  gap: var(--gap-13xl);
+  background-image: url(/public/pricedr1@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  max-width: 50rem;
+}
+.priceDetails,
+.priceSection {
+  justify-content: center;
+}
+.priceDetails {
+  width: 100%;
+  padding: 0 var(--padding-221xl);
+  box-sizing: border-box;
+  gap: var(--gap-101xl);
+  max-width: 120rem;
+  text-align: left;
+  font-size: var(--font-size-13xl);
 }
 .priceSection {
   align-self: stretch;
-  padding: var(--padding-45xl) var(--padding-101xl);
+  padding: var(--padding-29xl) var(--padding-101xl);
   gap: var(--gap-41xl);
   background-image: url(/public/pricesection@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  z-index: 3;
-  text-align: left;
-  font-size: var(--font-size-45xl);
+  cursor: pointer;
+  text-align: center;
+  font-size: var(--font-size-21xl);
   color: var(--common-0-white);
   font-family: var(--px-regular);
 }
 @media screen and (max-width: 960px) {
-  .priceDR {
-    flex: unset;
-    align-self: stretch;
-  }
   .priceDetails {
     flex-direction: column;
     gap: var(--gap-101xl);
     align-items: center;
     justify-content: center;
   }
+}
+@media screen and (max-width: 420px) {
+  .personNow50Container {
+    font-size: var(--font-size-5xl);
+  }
+  .priceHeader {
+    padding: var(--padding-13xl);
+    width: 90;
+  }
+  .howItWorks {
+    padding: var(--padding-base);
+    font-size: var(--font-size-5xl);
+  }
+  .bookAPrivate {
+    padding: var(--padding-5xs);
+    font-size: var(--px-regular-size);
+  }
+  .priceDR {
+    padding: var(--padding-5xl);
+  }
+  .minimumForAllContainer {
+    padding: var(--padding-5xs);
+    font-size: var(--px-regular-size);
+  }
   .priceDR1 {
-    flex: unset;
-    align-self: stretch;
+    padding: var(--padding-5xl);
+  }
+  .priceDetails {
+    border-radius: 0;
+    padding: var(--padding-5xs);
+  }
+  .priceSection {
+    padding: var(--padding-13xl);
   }
 }

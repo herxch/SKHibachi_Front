@@ -8,17 +8,13 @@ import styles from "./BodyWrapper.module.css";
 
 const BodyWrapper = () => {
   return (
-    <div className={styles.bodyWrapper}>
+    <div className={styles.homepage}>
       <Header />
       <VideoSection />
       <AboutSection />
       <PriceSectionContainer />
       <BookingFormContainer />
       <Footer />
-      <div className={styles.navLogo}>
-        <div className={styles.navLogoChild} />
-        <img className={styles.skCuber31} alt="" src="/sk-cuber-3-11@2x.png" />
-      </div>
     </div>
   );
 };

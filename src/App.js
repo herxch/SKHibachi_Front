@@ -24,8 +24,8 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "SK Hibachi";
-        metaDescription = "Hibachi";
+        title = "";
+        metaDescription = "";
         break;
     }
 
