@@ -22,6 +22,7 @@ function HeroVideo() {
       style={{
         // position: "fixed",
         width: "100%",
+
         // left: 0,
         // top: 0,
       }}

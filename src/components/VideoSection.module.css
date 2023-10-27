@@ -28,24 +28,21 @@
 .videoheaderWrapper {
   margin: 0 !important;
   position: absolute;
-  top: 1.63rem;
+  top: 3.63rem;
   left: 0;
   justify-content: center;
   padding: var(--padding-xs) 0;
   gap: var(--gap-base);
   z-index: 0;
+  width: 100%;
 }
 .videoSection {
   align-self: stretch;
-  overflow: hidden;
   justify-content: flex-start;
   position: relative;
-  background-image: url(/public/videosection@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
   text-align: center;
   font-size: var(--font-size-29xl);
   color: var(--common-0-white);
   font-family: var(--px-regular);
+  /* height: 100vh; */
 }
