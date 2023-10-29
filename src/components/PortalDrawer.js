@@ -1,12 +1,12 @@
-import { useMemo, useCallback } from "react";
+import { useMemo, useCallback } from 'react';
 
-import { createPortal } from "react-dom";
-import styles from "./PortalDrawer.module.css";
+import { createPortal } from 'react-dom';
+import styles from './PortalDrawer.module.css';
 
 const PortalDrawer = ({
   children,
   overlayColor,
-  placement = "Left",
+  placement = 'Right',
   onOutsideClick,
   zIndex = 100,
 }) => {
@@ -19,18 +19,18 @@ const PortalDrawer = ({
     }
 
     switch (placement) {
-      case "Left":
-        style.alignItems = "flex-start";
+      case 'Left':
+        style.alignItems = 'flex-start';
         break;
-      case "Right":
-        style.alignItems = "flex-end";
+      case 'Right':
+        style.alignItems = 'flex-end';
         break;
-      case "Top":
-        style.alignItems = "center";
+      case 'Top':
+        style.alignItems = 'center';
         break;
-      case "Bottom":
-        style.alignItems = "center";
-        style.justifyContent = "flex-end";
+      case 'Bottom':
+        style.alignItems = 'center';
+        style.justifyContent = 'flex-end';
         break;
     }
 
@@ -63,11 +63,11 @@ const PortalDrawer = ({
   );
 };
 
-export const DrawerContainer = ({ children, containerId = "portals" }) => {
+export const DrawerContainer = ({ children, containerId = 'portals' }) => {
   let portalsDiv = document.getElementById(containerId);
   if (!portalsDiv) {
-    portalsDiv = document.createElement("div");
-    portalsDiv.setAttribute("id", containerId);
+    portalsDiv = document.createElement('div');
+    portalsDiv.setAttribute('id', containerId);
     document.body.appendChild(portalsDiv);
   }
 

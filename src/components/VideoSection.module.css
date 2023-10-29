@@ -45,4 +45,5 @@
   color: var(--common-0-white);
   font-family: var(--px-regular);
   /* height: 100vh; */
+  margin-bottom: -0.75rem;
 }

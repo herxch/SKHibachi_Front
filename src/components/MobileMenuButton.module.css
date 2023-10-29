@@ -1,6 +1,6 @@
 @keyframes slide-in-left {
   0% {
-    transform: translateX(-200px);
+    transform: translateX(200px);
     opacity: 0;
   }
   to {
@@ -37,7 +37,7 @@
   height: 100%;
   padding: var(--padding-5xs);
   box-sizing: border-box;
-  gap: var(--gap-xs);
+  gap: var(--gap-41xl);
   opacity: 0;
   max-width: 90%;
   overflow: auto;
@@ -46,12 +46,10 @@
   animation: 0.25s ease 0s 1 normal forwards slide-in-left;
 }
 @media screen and (max-width: 960px) {
-  .mobileMenuButton {
-    display: none;
-  }
 }
 @media screen and (max-width: 420px) {
   .mobileMenuButton {
-    display: none;
+    width: 10rem;
+    height: 100vh;
   }
 }

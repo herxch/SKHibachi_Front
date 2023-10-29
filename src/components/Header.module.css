@@ -29,9 +29,9 @@
   align-items: center;
   justify-content: center;
   gap: var(--gap-xs);
-  min-width: 6.25rem;
-  max-width: 8.75rem;
-  z-index: 0;
+  min-width: 8.25rem;
+  /* max-width: 10.75rem; */
+  z-index: 3;
 }
 .hamline1Icon {
   position: relative;
@@ -98,7 +98,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-6xl) var(--padding-508xl);
+  /* padding: var(--padding-6xl) var(--padding-508xl); */
   box-sizing: border-box;
   position: relative;
   gap: var(--gap-3xs);
@@ -124,22 +124,29 @@
   .bookbutton,
   .hamburger {
     display: flex;
-    position: absolute;
+    /* position: absolute; */
   }
   .bookbutton {
     width: 5.5rem;
     height: 1.25rem;
-    left: 10rem;
+    top: 0;
+    left: 0;
+    position: relative;
+    /* left: 10rem; */
   }
-  .hamburger {
-    left: 2.5rem;
-    top: 2.5rem;
-  }
+
   .menuButton {
     display: none;
   }
   .logoIcon {
-    width: 5.5rem;
-    height: 5.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    top: 0;
+    left: 0;
+    position: relative;
+  }
+  .navbar {
+    justify-content: space-between;
+    padding: 0 2rem;
   }
 }

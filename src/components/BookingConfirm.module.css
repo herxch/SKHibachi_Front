@@ -46,8 +46,8 @@
 }
 .bookingconfirm {
   background-color: var(--common-0-white);
-  width: 474px;
-  height: 613px;
+  /* width: 474px; */
+  /* height: 613px; */
   flex-direction: column;
   justify-content: flex-start;
   padding: var(--padding-45xl) var(--padding-29xl);
