@@ -126,7 +126,7 @@ const PriceSectionContainer = () => {
       </section>
       {isBookTablePopupOpen && (
         <PortalPopup
-          overlayColor="rgba(113, 113, 113, 0.3)"
+          overlayColor="rgba(113, 113, 113, 0.9)"
           placement="Centered"
           onOutsideClick={closeBookTablePopup}
         >

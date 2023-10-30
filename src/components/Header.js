@@ -62,7 +62,7 @@ const Header = () => {
       )}
       {isMobileMenuButtonOpen && (
         <PortalDrawer
-          overlayColor="rgba(113, 113, 113, 0.3)"
+          overlayColor="rgba(113, 113, 113, 0.9)"
           placement="Right"
           onOutsideClick={closeMobileMenuButton}
         >
