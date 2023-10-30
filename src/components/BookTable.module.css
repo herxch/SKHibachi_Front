@@ -170,7 +170,7 @@
   padding: var(--padding-base) var(--padding-13xl);
   box-sizing: border-box;
   gap: var(--gap-5xl);
-  max-width: 880px;
+  max-width: 55rem;
   text-align: left;
   font-size: var(--px-regular-size);
   color: var(--color-gray-100);
@@ -252,7 +252,7 @@ button:disabled {
   padding: var(--padding-13xl) var(--padding-5xs);
   box-sizing: border-box;
   gap: var(--gap-13xl);
-  max-width: 900px;
+  max-width: 56.25rem;
   max-height: 100%;
   overflow: auto;
   text-align: left;
@@ -311,7 +311,7 @@ button:disabled {
   }
 
   .booktable {
-    width: 360px;
+    width: 20rem;
     align-items: center;
     justify-content: flex-start;
     border-radius: var(--br-31xl);

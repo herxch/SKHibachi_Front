@@ -4,7 +4,7 @@
   border-top: 2px solid var(--common-0-white);
   box-sizing: border-box;
   height: 0.13rem;
-  max-width: 90rem;
+  max-width: 50rem;
 }
 .vectorIcon {
   position: relative;
