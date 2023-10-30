@@ -1,10 +1,10 @@
 .galleryseparateline {
   width: 100%;
   position: relative;
-  border-top: 2px solid var(--common-0-white);
+  border-top: 4px solid var(--common-0-white);
   box-sizing: border-box;
-  height: 0.13rem;
-  max-width: 50rem;
+  height: 0.25rem;
+  max-width: 90rem;
 }
 .vectorIcon {
   position: relative;
@@ -113,13 +113,13 @@
 } */
 @media screen and (max-width: 960px) {
   .bookbutton {
-    max-height: 2.5rem;
+    height: 4rem;
     text-decoration: no-wrap;
   }
-  .bookbutton,
+  /* .bookbutton,
   .gallerySection {
     padding: var(--padding-13xl);
-  }
+  } */
   .photoWrapperIcon {
     grid-template-columns: 1fr;
   }

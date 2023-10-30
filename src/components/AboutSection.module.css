@@ -42,10 +42,10 @@
 }
 @media screen and (max-width: 960px) {
   .aboutWrapper {
-    padding: var(--padding-5xs);
+    padding: 0;
     width: 90%;
   }
   .aboutSection {
-    padding: var(--padding-13xl);
+    padding: 2rem 5rem;
   }
 }
