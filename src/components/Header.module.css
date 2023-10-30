@@ -107,14 +107,14 @@
   gap: var(--gap-3xs);
   min-height: 6.25rem;
 }
-@media screen and (max-width: 960px) {
+/* @media screen and (max-width: 960px) {
   .hamburger {
     display: flex;
   }
   .menuButton {
     display: none;
   }
-}
+} */
 @media screen and (max-width: 420px) {
   .bellicon {
     width: 0.5rem;

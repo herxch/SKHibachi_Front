@@ -92,7 +92,7 @@
   color: var(--common-0-white);
   font-family: var(--px-regular);
 }
-@media screen and (max-width: 960px) {
+/* @media screen and (max-width: 960px) {
   .photoWrapperIcon {
     width: 100%;
     height: auto;
@@ -100,7 +100,7 @@
     align-items: center;
     justify-content: center;
   }
-}
+} */
 @media screen and (max-width: 420px) {
   .bookbutton {
     max-height: 2.5rem;

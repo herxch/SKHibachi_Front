@@ -45,8 +45,8 @@
 .mobileMenuButton.animate {
   animation: 0.25s ease 0s 1 normal forwards slide-in-left;
 }
-@media screen and (max-width: 960px) {
-}
+/* @media screen and (max-width: 960px) {
+} */
 @media screen and (max-width: 420px) {
   .mobileMenuButton {
     width: 10rem;
