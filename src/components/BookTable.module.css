@@ -311,11 +311,11 @@ button:disabled {
   }
 
   .booktable {
-    width: 20rem;
+    /* width: 20rem; */
     align-items: center;
     justify-content: flex-start;
     border-radius: var(--br-31xl);
-    min-width: 22.5rem;
+    min-width: 18rem;
     padding: var(--padding-5xs);
   }
 }

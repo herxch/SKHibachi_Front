@@ -93,7 +93,7 @@ const PortalPopup = ({
 
       setRelativeStyle(style);
     } else {
-      style.maxWidth = "85%";
+      style.maxWidth = "80%";
       style.maxHeight = "85%";
       setRelativeStyle(style);
     }
