@@ -48,7 +48,7 @@
   margin-bottom: -0.75rem;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 960px) {
   .videoheaderWrapper {
     top: 0;
   }

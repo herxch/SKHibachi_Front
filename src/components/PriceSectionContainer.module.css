@@ -162,7 +162,7 @@
     justify-content: center;
   }
 } */
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 960px) {
   .personNow50Container {
     font-size: var(--font-size-5xl);
   }

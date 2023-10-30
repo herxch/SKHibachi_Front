@@ -260,7 +260,7 @@ button:disabled {
   color: var(--color-gray-200);
   font-family: var(--px-regular);
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 960px) {
   .appointment {
     font-size: var(--font-size-5xl);
   }
@@ -315,7 +315,7 @@ button:disabled {
     align-items: center;
     justify-content: flex-start;
     border-radius: var(--br-31xl);
-    max-width: 360px;
+    min-width: 22.5rem;
     padding: var(--padding-5xs);
   }
 }

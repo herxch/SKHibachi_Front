@@ -61,7 +61,7 @@
   color: var(--color-gray-100);
   font-family: var(--px-regular);
 }
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 960px) {
   .confirmationheading {
     font-size: var(--font-size-5xl);
   }
