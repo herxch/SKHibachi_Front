@@ -124,12 +124,9 @@
   .book {
     display: flex;
   }
-  .bookbutton,
-  .hamburger {
-    display: flex;
-    /* position: absolute; */
-  }
+
   .bookbutton {
+    display: flex;
     min-width: 5rem;
     height: 2.8rem;
     margin: 0;
@@ -153,5 +150,9 @@
   .navbar {
     justify-content: space-between;
     padding: 0 2rem;
+  }
+  .hamburger {
+    display: flex;
+    margin: 0 1rem;
   }
 }
