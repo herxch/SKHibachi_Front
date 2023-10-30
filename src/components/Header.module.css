@@ -18,10 +18,11 @@
   border: 2px solid var(--color-crimson-100);
   padding: var(--padding-5xs);
   background-color: var(--color-crimson-100);
-  margin: 0 !important;
-  position: absolute;
+  /* margin: 0 !important; */
+  /* position: absolute;
   top: 1.75rem;
-  right: 8.84rem;
+  right: 8.84rem; */
+  margin-right: 4rem;
   border-radius: var(--br-81xl);
   box-sizing: border-box;
   display: flex;
@@ -80,10 +81,12 @@
   z-index: 2;
 }
 .logoIcon {
-  position: absolute;
-  margin: 0 !important;
-  top: 1.25rem;
-  left: 3.13rem;
+  /* position: absolute; */
+  /* margin: 0 !important; */
+  /* top: 1.25rem;
+  left: 3.13rem; */
+  margin-left: 4rem;
+  margin-top: 6rem;
   width: 10.5rem;
   height: 10.5rem;
   object-fit: cover;
@@ -127,11 +130,12 @@
     /* position: absolute; */
   }
   .bookbutton {
-    width: 5.5rem;
-    height: 1.25rem;
-    top: 0;
+    min-width: 5rem;
+    height: 2.8rem;
+    margin: 0;
+    /* top: 0;
     left: 0;
-    position: relative;
+    position: relative; */
     /* left: 10rem; */
   }
 
@@ -141,9 +145,10 @@
   .logoIcon {
     width: 4.5rem;
     height: 4.5rem;
-    top: 0;
+    margin: 0;
+    /* top: 0;
     left: 0;
-    position: relative;
+    position: relative; */
   }
   .navbar {
     justify-content: space-between;
