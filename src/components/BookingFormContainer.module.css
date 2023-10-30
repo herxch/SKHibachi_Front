@@ -70,18 +70,28 @@
   height: 0.13rem;
 }
 .photoWrapperIcon {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   max-width: 60rem;
   overflow: hidden;
   max-height: 100%;
   object-fit: cover;
+  gap: 3rem;
+  padding: 3rem 0;
 }
+.photoWrapperIcon img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+}
+
 .gallerySection {
   align-self: stretch;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding: var(--padding-29xl) var(--padding-221xl);
+  /* padding: var(--padding-29xl) var(--padding-221xl); */
   gap: var(--gap-5xl);
   background-image: url(/public/gallerysection@3x.png);
   background-size: cover;
@@ -109,5 +119,8 @@
   .bookbutton,
   .gallerySection {
     padding: var(--padding-13xl);
+  }
+  .photoWrapperIcon {
+    grid-template-columns: 1fr;
   }
 }
