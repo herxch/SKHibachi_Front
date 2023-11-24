@@ -1,4 +1,4 @@
-import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import VideoSection from "../components/VideoSection";
 import AboutSection from "../components/AboutSection";
 import PriceSectionContainer from "../components/PriceSectionContainer";
@@ -9,7 +9,7 @@ import styles from "./BodyWrapper.module.css";
 const BodyWrapper = () => {
   return (
     <div className={styles.homepage}>
-      <Header />
+      <Navbar />
       <VideoSection />
       <AboutSection />
       <PriceSectionContainer />

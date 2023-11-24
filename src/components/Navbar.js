@@ -3,9 +3,9 @@ import BookTable from "./BookTable";
 import PortalPopup from "./PortalPopup";
 import MobileMenuButton from "./MobileMenuButton";
 import PortalDrawer from "./PortalDrawer";
-import styles from "./Header.module.css";
+import styles from "./Navbar.module.css";
 
-const Header = () => {
+const Navbar = () => {
   const [isBookTablePopupOpen, setBookTablePopupOpen] = useState(false);
   const [isMobileMenuButtonOpen, setMobileMenuButtonOpen] = useState(false);
 
@@ -73,4 +73,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;
