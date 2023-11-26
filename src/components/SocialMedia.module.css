@@ -1,6 +1,12 @@
 .socialMediaContainer {
   margin: 6rem auto;
   max-width: 50rem;
+  color: white;
+}
+
+.socialMediaTitle {
+  margin-bottom: 1.5rem;
+  font-size: 2.25rem;
 }
 
 .socialMediaIcon {

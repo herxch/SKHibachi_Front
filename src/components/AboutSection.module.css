@@ -26,10 +26,7 @@
 .aboutWrapper {
   flex: 1;
   flex-direction: column;
-  padding: 1rem;
   /* padding: var(--padding-base) var(--padding-141xl); */
-  box-sizing: border-box;
-  gap: var(--gap-21xl);
   max-width: 50rem;
 }
 .aboutSection {

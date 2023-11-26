@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import BookTable from './BookTable';
 import PortalPopup from './PortalPopup';
 import MobileMenuButton from './MobileMenuButton';
@@ -7,6 +7,7 @@ import PortalDrawer from './PortalDrawer';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isBookTablePopupOpen, setBookTablePopupOpen] = useState(false);
   const [isMobileMenuButtonOpen, setMobileMenuButtonOpen] = useState(false);
 
@@ -26,6 +27,10 @@ const Navbar = () => {
     setMobileMenuButtonOpen(false);
   }, []);
 
+  const logoClickHandler = () => {
+    navigate('/');
+  };
+
   return (
     <>
       <nav className={styles.navbar}>
@@ -34,7 +39,12 @@ const Navbar = () => {
           <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
           <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
         </div>
-        <img className={styles.logoIcon} alt='' src='/logo@2x.png' />
+        <img
+          className={styles.logoIcon}
+          onClick={logoClickHandler}
+          alt=''
+          src='/logo@2x.png'
+        />
         <nav className={styles.menuButton}>
           <NavLink to='/menu' className={styles.menu}>
             <b className={styles.menu1}>Menu</b>
