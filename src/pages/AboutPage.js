@@ -19,9 +19,11 @@ const AboutPage = () => {
 
   const fireupTitle = 'Fire up !';
   const fireupText = `Join us at S&K Hibachi to savor the irresistible flavors of hibachi cuisine, breathe in the fresh outdoor air, and create lasting memories with your loved ones. Discover the perfect blend of nature and gastronomy in Houston, Dallas, and Austin.
-<br />
-  So, if you're ready for a unique outdoor hibachi adventure, come dine with us at S&K Hibachi, where every meal is a delightful spectacle in the heart of Texas.`;
 
+  So, if you're ready for a unique outdoor hibachi adventure, come dine with us at S&K Hibachi, where every meal is a delightful spectacle in the heart of Texas.`;
+  const fireupParagraphs = fireupText
+    .split('\n')
+    .map((paragraph, index) => <p key={index}>{paragraph}</p>);
   return (
     <>
       <Navbar />
@@ -59,7 +61,7 @@ const AboutPage = () => {
         </div>
         <div className={styles.rightContentContainer}>
           <div className={styles.rightContent}>
-            <Card title={fireupTitle} text={fireupText} />
+            <Card title={fireupTitle} text={fireupParagraphs} />
           </div>
           <img
             src='/fireupImage.png'

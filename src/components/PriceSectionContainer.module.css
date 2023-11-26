@@ -131,7 +131,7 @@
   box-sizing: border-box;
   gap: var(--gap-101xl);
   max-width: 120rem;
-  text-align: left;
+  text-align: center;
   font-size: var(--font-size-13xl);
 }
 .priceSection {

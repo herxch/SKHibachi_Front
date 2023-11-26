@@ -7,6 +7,9 @@ import {
 } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
+import QnAPage from './pages/QnAPage';
+import MenuPage from './pages/MenuPage';
+import GalleryPage from './pages/GalleryPage';
 
 function App() {
   const action = useNavigationType();
@@ -48,6 +51,9 @@ function App() {
     <Routes>
       <Route path='/' element={<HomePage />} />
       <Route path='/about' element={<AboutPage />} />
+      <Route path='/qna' element={<QnAPage />} />
+      <Route path='/menu' element={<MenuPage />} />
+      <Route path='/gallery' element={<GalleryPage />} />
     </Routes>
   );
 }

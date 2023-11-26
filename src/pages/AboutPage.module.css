@@ -53,6 +53,7 @@
   .leftContentContainer,
   .rightContentContainer {
     flex-direction: column-reverse;
+    width: 95%;
   }
 
   .leftImage,
