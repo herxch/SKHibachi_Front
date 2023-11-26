@@ -19,9 +19,9 @@ const Navbar = () => {
     setBookTablePopupOpen(false);
   }, []);
 
-  const openMobileMenuButton = useCallback(() => {
-    setMobileMenuButtonOpen(true);
-  }, []);
+  const toggleMobileMenuButton = () => {
+    setMobileMenuButtonOpen((prev) => !prev);
+  };
 
   const closeMobileMenuButton = useCallback(() => {
     setMobileMenuButtonOpen(false);
@@ -34,10 +34,19 @@ const Navbar = () => {
   return (
     <>
       <nav className={styles.navbar}>
-        <div className={styles.hamburger} onClick={openMobileMenuButton}>
-          <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
-          <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
-          <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
+        <div className={styles.hamburger} onClick={toggleMobileMenuButton}>
+          {!isMobileMenuButtonOpen && (
+            <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
+          )}
+          {!isMobileMenuButtonOpen && (
+            <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
+          )}
+          {!isMobileMenuButtonOpen && (
+            <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
+          )}
+          {isMobileMenuButtonOpen && (
+            <img className={styles.crossIcon} alt='' src='/crossIcon.png' />
+          )}
         </div>
         <img
           className={styles.logoIcon}
@@ -77,7 +86,7 @@ const Navbar = () => {
       {isMobileMenuButtonOpen && (
         <PortalDrawer
           overlayColor='rgba(113, 113, 113, 0.9)'
-          placement='Right'
+          placement='Top'
           onOutsideClick={closeMobileMenuButton}
         >
           <MobileMenuButton onClose={closeMobileMenuButton} />

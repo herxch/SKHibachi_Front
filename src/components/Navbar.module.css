@@ -39,6 +39,12 @@
   width: 2.92rem;
   height: 0.31rem;
 }
+
+.crossIcon {
+  width: 2.92rem;
+  height: 2.92rem;
+}
+
 .hamburger {
   overflow: hidden;
   display: none;
@@ -119,10 +125,6 @@
   }
 } */
 @media screen and (max-width: 960px) {
-  .bellicon {
-    width: 0.5rem;
-    height: 0.5rem;
-  }
   .bellicon,
   .book {
     display: flex;
@@ -130,7 +132,7 @@
 
   .bookbutton {
     display: flex;
-    min-width: 5rem;
+    min-width: 8rem;
     height: 2.8rem;
     margin: 0;
     /* top: 0;

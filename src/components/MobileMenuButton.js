@@ -1,10 +1,11 @@
-import { useEffect } from "react";
-import styles from "./MobileMenuButton.module.css";
+import { useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
+import styles from './MobileMenuButton.module.css';
 
 const MobileMenuButton = ({ onClose }) => {
   useEffect(() => {
     const scrollAnimElements = document.querySelectorAll(
-      "[data-animate-on-scroll]"
+      '[data-animate-on-scroll]'
     );
     const observer = new IntersectionObserver(
       (entries) => {
@@ -33,15 +34,18 @@ const MobileMenuButton = ({ onClose }) => {
   }, []);
   return (
     <div className={styles.mobileMenuButton} data-animate-on-scroll>
-      <button className={styles.menu}>
+      <NavLink to='/menu' className={styles.menu}>
         <b className={styles.menu1}>Menu</b>
-      </button>
-      <button className={styles.menu}>
+      </NavLink>
+      <NavLink to='/gallery' className={styles.menu}>
         <b className={styles.menu1}>Gallery</b>
-      </button>
-      <button className={styles.story}>
-        <b className={styles.menu1}>Story</b>
-      </button>
+      </NavLink>
+      <NavLink to='/about' className={styles.menu}>
+        <b className={styles.menu1}>About us</b>
+      </NavLink>
+      <NavLink to='/qna' className={styles.menu}>
+        <b className={styles.menu1}>Q&A</b>
+      </NavLink>
     </div>
   );
 };

@@ -6,7 +6,7 @@ import styles from './PortalDrawer.module.css';
 const PortalDrawer = ({
   children,
   overlayColor,
-  placement = 'Right',
+  placement = 'Top',
   onOutsideClick,
   zIndex = 100,
 }) => {
