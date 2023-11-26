@@ -50,12 +50,9 @@
   gap: var(--gap-3xs);
 }
 .howItWorks {
-  margin: 0;
-  position: relative;
-  font-size: inherit;
-  line-height: 140%;
-  font-weight: 700;
-  font-family: inherit;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 2.5rem;
 }
 .bookAPrivate,
 .howitworksline {
@@ -100,14 +97,9 @@
   font-family: var(--px-regular);
 }
 .minimumForAllContainer {
-  margin: 0;
-  align-self: stretch;
-  position: relative;
-  font-size: var(--font-size-5xl);
-  letter-spacing: 0.02em;
-  line-height: 120%;
-  white-space: pre-wrap;
-  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+  line-height: 1.6;
 }
 .priceDR1,
 .priceDetails,
@@ -117,17 +109,17 @@
   align-items: center;
 }
 .priceDR1 {
-  width: 100%;
-  border-radius: var(--br-31xl);
-  justify-content: flex-start;
-  padding: var(--padding-13xl);
-  box-sizing: border-box;
-  gap: var(--gap-13xl);
-  background-image: url(/public/pricedr1@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #332f2e;
+  background-image: url(/public/mattebg.png);
+  border-radius: 50px;
+  border: white solid 2px;
+  padding: 20px;
+  color: white;
   max-width: 50rem;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: block;
 }
 .priceDetails,
 .priceSection {
@@ -144,13 +136,12 @@
 }
 .priceSection {
   align-self: stretch;
-  padding: var(--padding-29xl) var(--padding-101xl);
+  padding: 6rem 0;
   gap: var(--gap-41xl);
   background-image: url(/public/pricesection@3x.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
-  cursor: pointer;
   text-align: center;
   font-size: var(--font-size-21xl);
   color: var(--common-0-white);

@@ -1,11 +1,11 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import {
   Routes,
   Route,
   useNavigationType,
   useLocation,
-} from "react-router-dom";
-import BodyWrapper from "./pages/BodyWrapper";
+} from 'react-router-dom';
+import HomePage from './pages/HomePage';
 
 function App() {
   const action = useNavigationType();
@@ -13,19 +13,19 @@ function App() {
   const pathname = location.pathname;
 
   useEffect(() => {
-    if (action !== "POP") {
+    if (action !== 'POP') {
       window.scrollTo(0, 0);
     }
   }, [action, pathname]);
 
   useEffect(() => {
-    let title = "";
-    let metaDescription = "";
+    let title = '';
+    let metaDescription = '';
 
     switch (pathname) {
-      case "/":
-        title = "";
-        metaDescription = "";
+      case '/':
+        title = '';
+        metaDescription = '';
         break;
     }
 
@@ -45,7 +45,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<BodyWrapper />} />
+      <Route path='/' element={<HomePage />} />
     </Routes>
   );
 }

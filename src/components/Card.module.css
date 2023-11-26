@@ -1,0 +1,25 @@
+/* Card.module.css */
+.cardContainer {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #332f2e;
+  background-image: url(/public/mattebg.png);
+  border-radius: 50px;
+  border: white solid 2px;
+  padding: 20px;
+  color: white;
+  max-width: 50rem;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.cardTitle {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 2.5rem;
+}
+
+.cardText {
+  padding: 1rem;
+  font-size: 2rem;
+  line-height: 1.6;
+}

@@ -1,7 +1,8 @@
-import { useState, useCallback } from "react";
-import BookTable from "./BookTable";
-import PortalPopup from "./PortalPopup";
-import styles from "./BookingFormContainer.module.css";
+import { useState, useCallback } from 'react';
+import BookTable from './BookTable';
+import PortalPopup from './PortalPopup';
+import styles from './BookingFormContainer.module.css';
+import SocialMedia from './SocialMedia';
 
 const BookingFormContainer = () => {
   const [isBookTablePopupOpen, setBookTablePopupOpen] = useState(false);
@@ -17,32 +18,38 @@ const BookingFormContainer = () => {
   return (
     <>
       <section className={styles.gallerySection}>
-        <div className={styles.galleryseparateline} />
+        <div className={styles.locations}>
+          <div className={styles.city}>
+            <div className={`${styles.cityImage} ${styles.houston}`}></div>
+            <p>HOUSTON</p>
+          </div>
+          <div className={styles.city}>
+            <div className={`${styles.cityImage}  ${styles.dallas}`}></div>
+            <p>DALLAS</p>
+            <p>(COMING SOON)</p>
+          </div>
+          <div className={styles.city}>
+            <div className={`${styles.cityImage}  ${styles.austin}`}></div>
+            <p>AUSTIN</p>
+          </div>
+        </div>
         <div className={styles.contact}>
           <button className={styles.bookbutton} onClick={openBookTablePopup}>
-            <img className={styles.vectorIcon} alt="" src="/vector2.svg" />
-            <h3 className={styles.bookNow}>BOOK NOW</h3>
+            <img className={styles.vectorIcon} alt='' src='/vector2.svg' />
+            <h3 className={styles.bookNow}>Appointment</h3>
           </button>
-          <h3 className={styles.weCoverAll}>We cover all State of Taxes!</h3>
-          <h2
-            className={styles.haveFunWith}
-          >{`Have fun with us and enjoy an unforgettable meal ! `}</h2>
-          <h2 className={styles.haveFunWith}>{`Contact us `}</h2>
-          <h2 className={styles.haveFunWith}>(832)-729-3896</h2>
-          <h2 className={styles.haveFunWith}>skhibachi@gmail.com</h2>
+          <div className={styles.contactInfo}>
+            <p>Contact us</p>
+            <p>(832)-729-3896</p>
+            <p>skhibachi@gmail.com</p>
+          </div>
         </div>
-        <div className={styles.photoseparateline} />
-        <div className={styles.photoWrapperIcon}>
-          <img className={styles.photo} alt="" src="/photo1.png" />
-          <img className={styles.photo} alt="" src="/photo2.png" />
-          <img className={styles.photo} alt="" src="/photo3.png" />
-          <img className={styles.photo} alt="" src="/photo4.png" />
-        </div>
+        <SocialMedia />
       </section>
       {isBookTablePopupOpen && (
         <PortalPopup
-          overlayColor="rgba(113, 113, 113, 0.9)"
-          placement="Centered"
+          overlayColor='rgba(113, 113, 113, 0.9)'
+          placement='Centered'
           onOutsideClick={closeBookTablePopup}
         >
           <BookTable onClose={closeBookTablePopup} />

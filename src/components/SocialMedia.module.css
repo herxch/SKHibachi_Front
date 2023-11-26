@@ -1,0 +1,39 @@
+.socialMediaContainer {
+  margin: 6rem auto;
+  max-width: 50rem;
+}
+
+.socialMediaIcon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.socialMediaIcon a {
+  display: inline-block;
+  width: 5.5rem; /* 根据需要调整 */
+  height: 5.5rem; /* 根据需要调整 */
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.fb {
+  background-image: url(/public/Facebook.png);
+}
+
+.ig {
+  background-image: url(/public/Instagram.png);
+}
+
+.tw {
+  background-image: url(/public/Twitter.png);
+}
+
+.yt {
+  background-image: url(/public/Youtube.png);
+}
+
+.yp {
+  background-image: url(/public/Yelp.png);
+}

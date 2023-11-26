@@ -58,20 +58,19 @@
   text-align: center;
 }
 .menu,
-.menuButton,
-.story {
+.menuButton {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.menu,
-.story {
+.menu {
   cursor: pointer;
   border: 0;
   padding: 0;
   background-color: transparent;
   align-self: stretch;
   flex-direction: column;
+  text-decoration: none;
 }
 .menuButton {
   margin: 0;
@@ -86,10 +85,10 @@
   /* top: 1.25rem;
   left: 3.13rem; */
   margin-left: 4rem;
-  margin-top: 6rem;
-  width: 10.5rem;
-  height: 10.5rem;
-  object-fit: cover;
+  /* margin-top: 6rem; */
+  width: 5rem;
+  height: 5rem;
+  /* object-fit: cover; */
   z-index: 3;
 }
 .navbar {
@@ -106,6 +105,9 @@
   gap: var(--gap-3xs);
   min-height: 6.25rem;
   width: 100%;
+}
+.active {
+  font-weight: 700;
 }
 /* @media screen and (max-width: 960px) {
   .hamburger {
