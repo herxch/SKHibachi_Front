@@ -1,8 +1,9 @@
-import styles from "./BookingConfirm.module.css";
+import styles from './BookingConfirm.module.css';
 
 const BookingConfirm = ({ onClose }) => {
   return (
     <div className={styles.bookingconfirm}>
+      <img className={styles.logoIcon} alt='Company Logo' src='/logo@2x.png' />
       <h1 className={styles.confirmationheading}>
         Thank you so much for booking with us!
       </h1>

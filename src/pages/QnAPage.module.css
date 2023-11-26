@@ -32,5 +32,20 @@
   .contentWrapper {
     flex-direction: column;
     width: 95%;
+    gap: 2rem;
+  }
+
+  .qnaWrapper {
+    gap: 2rem;
+    padding: 3rem 0 0 0;
+  }
+
+  .leftContent,
+  .rightContent {
+    gap: 1rem;
+  }
+  .contentWrapper {
+    gap: 1rem;
+    width: 90%;
   }
 }

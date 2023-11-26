@@ -17,22 +17,22 @@ const GalleryPage = () => {
           <img
             src='/photo1.png'
             alt='happy customers'
-            className={styles.photo}
+            className={styles.photo1}
           />
           <img
             src='/photo2.png'
             alt='happy customers'
-            className={styles.photo}
+            className={styles.photo2}
           />
           <img
             src='/photo3.png'
             alt='happy customers'
-            className={styles.photo}
+            className={styles.photo3}
           />
           <img
             src='/photo4.png'
             alt='happy customers'
-            className={styles.photo}
+            className={styles.photo4}
           />
         </div>
         <SocialMedia />

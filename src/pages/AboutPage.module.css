@@ -54,6 +54,7 @@
   .rightContentContainer {
     flex-direction: column-reverse;
     width: 95%;
+    gap: 2rem;
   }
 
   .leftImage,
@@ -61,5 +62,13 @@
   .leftContent,
   .rightContent {
     order: unset; /* 重置顺序 */
+  }
+  .aboutWrapper {
+    gap: 2rem;
+    padding: 3rem 0 0 0;
+  }
+  .leftImage,
+  .rightImage {
+    width: 70%;
   }
 }

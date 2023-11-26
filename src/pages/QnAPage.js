@@ -20,24 +20,36 @@ const QnAPage = () => {
   Fresh Cooked Vegetables
   Side Salad
   Signature Sauce`;
-  const qnaL2Paragraph = qnaL2Text
-    .split('\n')
-    .map((paragraph, index) => <p key={index}>{paragraph}</p>);
+  const qnaL2Paragraph = qnaL2Text.split('\n').map((paragraph, index) => (
+    // 使用 React.Fragment 而不是 <p> 来避免嵌套问题
+    <React.Fragment key={index}>
+      {paragraph}
+      <br />
+    </React.Fragment>
+  ));
   const qnaL3Title = 'What time will the chef arrive?';
   const qnaL3Text = `The chef will try to arrive approximately 10-15 minutes prior to the reservation time. Our set-up process is usually very easy and only takes a few minutes.`;
   const qnaL4Title = 'Do I Need to Tip the Chef?';
   const qnaL4Text = `Gratuity goes directly to the chef and is greatly appreciated!
   Most of our guests tip at minimum similar to eating at restaurants 18% - 25%`;
-  const qnaL4Paragraph = qnaL4Text
-    .split('\n')
-    .map((paragraph, index) => <p key={index}>{paragraph}</p>);
+  const qnaL4Paragraph = qnaL4Text.split('\n').map((paragraph, index) => (
+    // 使用 React.Fragment 而不是 <p> 来避免嵌套问题
+    <React.Fragment key={index}>
+      {paragraph}
+      <br />
+    </React.Fragment>
+  ));
   const qnaL5Title = 'Can I Have More Details on Kids Prices?';
   const qnaL5Text = `The Kids price is for ages between 5-12 years old.
   13 and older is adult price.
   Age 4 and under eats free! They get 1 protein and about 1/4 cup of rice.`;
-  const qnaL5Paragraph = qnaL5Text
-    .split('\n')
-    .map((paragraph, index) => <p key={index}>{paragraph}</p>);
+  const qnaL5Paragraph = qnaL5Text.split('\n').map((paragraph, index) => (
+    // 使用 React.Fragment 而不是 <p> 来避免嵌套问题
+    <React.Fragment key={index}>
+      {paragraph}
+      <br />
+    </React.Fragment>
+  ));
   const qnaL6Title = 'Do you cook inside homes?';
   const qnaL6Text = `Our experience is best outside in backyards, terraces, balconies etc.. Although we prefer outside we can cook indoors if we are notified ahead of time and there are high ceilings and plenty of ventilation in the cooking area.`;
 
@@ -53,16 +65,24 @@ const QnAPage = () => {
   const qnaR5Text = `We do not offer setup service for the parties. Companies that do often charge 2x 3x our price.
 
   Our chefs just need space for the grill setup so we can entertain you and your guests in almost any type of setup you choose.`;
-  const qnaR5Paragraph = qnaR5Text
-    .split('\n')
-    .map((paragraph, index) => <p key={index}>{paragraph}</p>);
+  const qnaR5Paragraph = qnaR5Text.split('\n').map((paragraph, index) => (
+    // 使用 React.Fragment 而不是 <p> 来避免嵌套问题
+    <React.Fragment key={index}>
+      {paragraph}
+      <br />
+    </React.Fragment>
+  ));
   const qnaR6Title = 'Are These Parties Kid Friendly?';
   const qnaR6Text = `Yes 100% Our parties are fun for the whole family! 
   Our chefs are very talented and can tailor the experience to be even more kid and family friendly. 
   Just let the reservations manager know after booking. `;
-  const qnaR6Paragraph = qnaR6Text
-    .split('\n')
-    .map((paragraph, index) => <p key={index}>{paragraph}</p>);
+  const qnaR6Paragraph = qnaR6Text.split('\n').map((paragraph, index) => (
+    // 使用 React.Fragment 而不是 <p> 来避免嵌套问题
+    <React.Fragment key={index}>
+      {paragraph}
+      <br />
+    </React.Fragment>
+  ));
 
   return (
     <>

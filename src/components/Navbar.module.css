@@ -78,6 +78,12 @@
   flex-direction: column;
   text-decoration: none;
 }
+.menu:hover {
+  text-decoration: underline;
+  text-decoration-color: white; /* Set the color of the underline to white */
+  text-decoration-thickness: 2px; /* Set the thickness of the underline */
+}
+
 .menuButton {
   margin: 0;
   flex: 1;

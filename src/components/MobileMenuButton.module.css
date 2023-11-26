@@ -31,6 +31,12 @@
   padding: 0;
   background-color: transparent;
 }
+
+.menu:hover {
+  text-decoration: underline;
+  text-decoration-color: white; /* Set the color of the underline to white */
+  text-decoration-thickness: 2px; /* Set the thickness of the underline */
+}
 .mobileMenuButton {
   background-color: var(--color-gray-200);
   width: 67px;

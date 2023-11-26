@@ -116,7 +116,7 @@
   padding: 20px;
   color: white;
   max-width: 50rem;
-  margin: auto;
+  /* margin: auto; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   text-align: center;
   display: block;
@@ -161,7 +161,7 @@
   }
   .priceHeader {
     padding: var(--padding-13xl);
-    width: 90%;
+    width: 95%;
   }
   .howItWorks {
     padding: var(--padding-base);
@@ -179,7 +179,7 @@
     font-size: var(--px-regular-size);
   }
   .priceDR1 {
-    padding: var(--padding-5xl);
+    width: 95%;
   }
   .priceDetails {
     border-radius: 0;

@@ -1,12 +1,12 @@
-import { useMemo, useCallback, useState, useRef, useEffect } from "react";
+import { useMemo, useCallback, useState, useRef, useEffect } from 'react';
 
-import { createPortal } from "react-dom";
-import styles from "./PortalPopup.module.css";
+import { createPortal } from 'react-dom';
+import styles from './PortalPopup.module.css';
 
 const PortalPopup = ({
   children,
   overlayColor,
-  placement = "Centered",
+  placement = 'Centered',
   onOutsideClick,
   zIndex = 100,
   left = 0,
@@ -28,30 +28,31 @@ const PortalPopup = ({
     }
     if (!relativeLayerRef?.current) {
       switch (placement) {
-        case "Centered":
-          style.alignItems = "center";
-          style.justifyContent = "center";
+        case 'Centered':
+          style.alignItems = 'stretch';
+          style.justifyContent = 'center';
+          style.padding = '0 2rem';
           break;
-        case "Top left":
-          style.alignItems = "flex-start";
+        case 'Top left':
+          style.alignItems = 'flex-start';
           break;
-        case "Top center":
-          style.alignItems = "center";
+        case 'Top center':
+          style.alignItems = 'center';
           break;
-        case "Top right":
-          style.alignItems = "flex-end";
+        case 'Top right':
+          style.alignItems = 'flex-end';
           break;
-        case "Bottom left":
-          style.alignItems = "flex-start";
-          style.justifyContent = "flex-end";
+        case 'Bottom left':
+          style.alignItems = 'flex-start';
+          style.justifyContent = 'flex-end';
           break;
-        case "Bottom center":
-          style.alignItems = "center";
-          style.justifyContent = "flex-end";
+        case 'Bottom center':
+          style.alignItems = 'center';
+          style.justifyContent = 'flex-end';
           break;
-        case "Bottom right":
-          style.alignItems = "flex-end";
-          style.justifyContent = "flex-end";
+        case 'Bottom right':
+          style.alignItems = 'flex-end';
+          style.justifyContent = 'flex-end';
           break;
       }
     }
@@ -71,21 +72,21 @@ const PortalPopup = ({
         height: relativeH,
       } = relativeItem;
       const { width: containerW, height: containerH } = containerItem;
-      style.position = "absolute";
+      style.position = 'absolute';
       switch (placement) {
-        case "Top left":
+        case 'Top left':
           style.top = relativeY - containerH - top;
           style.left = relativeX + left;
           break;
-        case "Top right":
+        case 'Top right':
           style.top = relativeY - containerH - top;
           style.left = relativeX + relativeW - containerW - right;
           break;
-        case "Bottom left":
+        case 'Bottom left':
           style.top = relativeY + relativeH + bottom;
           style.left = relativeX + left;
           break;
-        case "Bottom right":
+        case 'Bottom right':
           style.top = relativeY + relativeH + bottom;
           style.left = relativeX + relativeW - containerW - right;
           break;
@@ -93,8 +94,8 @@ const PortalPopup = ({
 
       setRelativeStyle(style);
     } else {
-      style.maxWidth = "80%";
-      style.maxHeight = "85%";
+      style.maxWidth = '95%';
+      style.maxHeight = '85%';
       setRelativeStyle(style);
     }
   }, [
@@ -110,12 +111,12 @@ const PortalPopup = ({
   useEffect(() => {
     setPosition();
 
-    window.addEventListener("resize", setPosition);
-    window.addEventListener("scroll", setPosition, true);
+    window.addEventListener('resize', setPosition);
+    window.addEventListener('scroll', setPosition, true);
 
     return () => {
-      window.removeEventListener("resize", setPosition);
-      window.removeEventListener("scroll", setPosition, true);
+      window.removeEventListener('resize', setPosition);
+      window.removeEventListener('scroll', setPosition, true);
     };
   }, [setPosition]);
 
@@ -147,11 +148,11 @@ const PortalPopup = ({
   );
 };
 
-export const Portal = ({ children, containerId = "portals" }) => {
+export const Portal = ({ children, containerId = 'portals' }) => {
   let portalsDiv = document.getElementById(containerId);
   if (!portalsDiv) {
-    portalsDiv = document.createElement("div");
-    portalsDiv.setAttribute("id", containerId);
+    portalsDiv = document.createElement('div');
+    portalsDiv.setAttribute('id', containerId);
     document.body.appendChild(portalsDiv);
   }
 

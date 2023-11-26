@@ -21,3 +21,10 @@
   color: var(--common-0-white);
   font-family: var(--px-regular);
 }
+
+@media screen and (max-width: 960px) {
+  .footer {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}

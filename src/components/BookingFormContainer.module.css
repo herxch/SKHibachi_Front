@@ -200,4 +200,15 @@
   .photoWrapperIcon {
     grid-template-columns: 1fr;
   }
+
+  .locations {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .dallas {
+    margin: 0;
+  }
+  .city p {
+    font-size: 1.5rem;
+  }
 }

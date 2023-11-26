@@ -66,5 +66,21 @@
   .contentWrapper {
     flex-direction: column;
     width: 95%;
+    gap: 3rem;
+  }
+  .minimumForAllContainer {
+    font-size: 1rem;
+  }
+  .howItWorks {
+    font-size: 1.5rem;
+  }
+
+  .menuWrapper {
+    gap: 0;
+    padding: 1rem 0;
+  }
+
+  .rightContent {
+    gap: 1rem;
   }
 }
