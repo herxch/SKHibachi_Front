@@ -1,5 +1,6 @@
 .qnaWrapper {
   background-image: url(/public/pricesection@3x.png);
+  background-color: rgba(0, 0, 0, 0.75);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
