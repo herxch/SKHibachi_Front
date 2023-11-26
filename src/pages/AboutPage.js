@@ -21,9 +21,13 @@ const AboutPage = () => {
   const fireupText = `Join us at S&K Hibachi to savor the irresistible flavors of hibachi cuisine, breathe in the fresh outdoor air, and create lasting memories with your loved ones. Discover the perfect blend of nature and gastronomy in Houston, Dallas, and Austin.
 
   So, if you're ready for a unique outdoor hibachi adventure, come dine with us at S&K Hibachi, where every meal is a delightful spectacle in the heart of Texas.`;
-  const fireupParagraphs = fireupText
-    .split('\n')
-    .map((paragraph, index) => <p key={index}>{paragraph}</p>);
+  const fireupParagraphs = fireupText.split('\n').map((paragraph, index) => (
+    // 使用 React.Fragment 而不是 <p> 来避免嵌套问题
+    <React.Fragment key={index}>
+      {paragraph}
+      <br />
+    </React.Fragment>
+  ));
   return (
     <>
       <Navbar />

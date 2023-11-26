@@ -17,6 +17,8 @@
   display: flex;
   flex-direction: row;
   gap: 5rem;
+  width: 95%;
+  justify-content: center;
 }
 
 .leftContent,
