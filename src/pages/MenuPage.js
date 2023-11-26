@@ -106,6 +106,7 @@ const MenuPage = () => {
           <div className={styles.rightContent}>
             <div onClick={() => videoRef.current.play()}>
               <video
+                className={styles.video}
                 ref={videoRef}
                 autoPlay
                 loop
@@ -133,6 +134,7 @@ const MenuPage = () => {
             </div>
             <div onClick={() => videoRef.current.play()}>
               <video
+                className={styles.video}
                 ref={videoRef}
                 autoPlay
                 loop

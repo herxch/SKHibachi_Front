@@ -42,7 +42,7 @@
   gap: 5rem;
 }
 
-video {
+.video {
   max-width: 30rem;
 }
 
@@ -57,4 +57,11 @@ video {
   gap: 5rem;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 960px) {
+  .contentWrapper {
+    flex-direction: column;
+    width: 95%;
+  }
 }

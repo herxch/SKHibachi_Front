@@ -1,0 +1,27 @@
+.galleryWrapper {
+  background-image: url(/public/gallerybg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 或者其他对齐方式 */
+  justify-content: center; /* 根据需要调整 */
+  gap: 10rem;
+  padding: 6rem 0;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  justify-items: stretch;
+}
+
+@media (max-width: 960px) {
+  .photos {
+    grid-template-columns: 1fr;
+    width: 95%;
+  }
+}
