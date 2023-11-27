@@ -52,6 +52,7 @@
 .leftContent,
 .rightContent {
   max-width: 50rem;
+  width: 100%;
 }
 
 .rightContent {
