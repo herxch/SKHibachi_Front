@@ -34,20 +34,6 @@ const Navbar = () => {
   return (
     <>
       <nav className={styles.navbar}>
-        <div className={styles.hamburger} onClick={toggleMobileMenuButton}>
-          {!isMobileMenuButtonOpen && (
-            <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
-          )}
-          {!isMobileMenuButtonOpen && (
-            <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
-          )}
-          {!isMobileMenuButtonOpen && (
-            <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
-          )}
-          {isMobileMenuButtonOpen && (
-            <img className={styles.crossIcon} alt='' src='/crossIcon.png' />
-          )}
-        </div>
         <img
           className={styles.logoIcon}
           onClick={logoClickHandler}
@@ -68,11 +54,26 @@ const Navbar = () => {
             <b className={styles.menu1}>Q&A</b>
           </NavLink>
         </nav>
-
-        <button className={styles.bookbutton} onClick={openBookTablePopup}>
-          <img className={styles.bellicon} alt='' src='/vector.svg' />
-          <b className={styles.book}>Book</b>
-        </button>
+        <div className={styles.hamburger} onClick={toggleMobileMenuButton}>
+          {!isMobileMenuButtonOpen && (
+            <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
+          )}
+          {!isMobileMenuButtonOpen && (
+            <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
+          )}
+          {!isMobileMenuButtonOpen && (
+            <img className={styles.hamline1Icon} alt='' src='/vector1.svg' />
+          )}
+          {isMobileMenuButtonOpen && (
+            <img className={styles.crossIcon} alt='' src='/crossIcon.png' />
+          )}
+        </div>
+        {!isMobileMenuButtonOpen && (
+          <button className={styles.bookbutton} onClick={openBookTablePopup}>
+            <img className={styles.bellicon} alt='' src='/vector.svg' />
+            <b className={styles.book}>Book</b>
+          </button>
+        )}
       </nav>
       {isBookTablePopupOpen && (
         <PortalPopup

@@ -41,9 +41,9 @@
   background-color: var(--color-gray-200);
   width: 67px;
   height: 100%;
-  padding: var(--padding-5xs);
+  /* padding: var(--padding-5xs); */
   box-sizing: border-box;
-  gap: var(--gap-41xl);
+  gap: 2rem;
   opacity: 0;
   max-width: 90%;
   overflow: auto;
@@ -53,10 +53,54 @@
 }
 /* @media screen and (max-width: 960px) {
 } */
+
+.bellicon,
+.book {
+  position: relative;
+}
+.bellicon {
+  width: 1rem;
+  height: 1rem;
+}
+.book {
+  font-size: var(--px-regular-size);
+  line-height: 140%;
+  font-family: var(--px-regular);
+  color: var(--common-0-white);
+  text-align: left;
+}
+.bookbutton {
+  cursor: pointer;
+  border: 2px solid var(--color-crimson-100);
+  padding: var(--padding-5xs);
+  background-color: var(--color-crimson-100);
+  /* margin: 0 !important; */
+  /* position: absolute;
+  top: 1.75rem;
+  right: 8.84rem; */
+  margin-right: 4rem;
+  border-radius: var(--br-81xl);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-xs);
+  min-width: 8.25rem;
+  /* max-width: 10.75rem; */
+  z-index: 3;
+}
 @media screen and (max-width: 960px) {
   .mobileMenuButton {
     width: 100%;
     max-width: 100%;
     height: 20rem;
+  }
+  .bellicon,
+  .book {
+    display: flex;
+  }
+  .bookbutton {
+    margin: 0;
   }
 }

@@ -192,6 +192,7 @@
   .bookbutton {
     height: 4rem;
     text-decoration: no-wrap;
+    padding: 2rem;
   }
   /* .bookbutton,
   .gallerySection {
@@ -204,11 +205,16 @@
   .locations {
     flex-direction: column;
     gap: 1rem;
+    margin-top: 2rem;
   }
   .dallas {
     margin: 0;
   }
   .city p {
     font-size: 1.5rem;
+  }
+  .cityImage {
+    width: 12.5rem; /* 根据需要调整 */
+    height: 12.5rem; /* 根据需要调整 */
   }
 }

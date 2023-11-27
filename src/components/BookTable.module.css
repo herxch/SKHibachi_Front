@@ -372,6 +372,7 @@ button:disabled {
   background-color: var(--common-0-white);
   /* width: 885px; */
   /* height: 939px; */
+  margin: 0 auto;
   flex-direction: column;
   padding: var(--padding-13xl) var(--padding-5xs);
   box-sizing: border-box;
@@ -483,7 +484,8 @@ button:disabled {
     align-items: center;
     justify-content: flex-start;
     border-radius: var(--br-31xl);
-    width: 100%;
+    width: 80%;
+    /* margin: 0; */
     /* padding: var(--padding-5xs); */
   }
 }

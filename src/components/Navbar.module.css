@@ -137,10 +137,11 @@
   }
 
   .bookbutton {
-    display: flex;
+    display: none;
+    /* display: flex;
     min-width: 8rem;
     height: 2.8rem;
-    margin: 0;
+    margin: 0; */
     /* top: 0;
     left: 0;
     position: relative; */
@@ -153,7 +154,7 @@
   .logoIcon {
     width: 4.5rem;
     height: 4.5rem;
-    margin: 0;
+    margin: 0 1rem;
     /* top: 0;
     left: 0;
     position: relative; */

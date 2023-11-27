@@ -3,5 +3,6 @@
   flex-direction: column;
   position: fixed;
   inset: 0;
-  width: 90vw;
+  width: 100vw;
+  margin: 0 auto;
 }

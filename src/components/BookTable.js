@@ -876,6 +876,7 @@ const BookTable = ({ onClose }) => {
           overlayColor='rgba(113, 113, 113, 0.9)'
           placement='Centered'
           onOutsideClick={closeBookingConfirmPopup}
+          className='popup'
         >
           <BookingConfirm onClose={closeBookingConfirmPopup} />
         </PortalPopup>

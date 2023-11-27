@@ -14,6 +14,7 @@ const PortalPopup = ({
   top = 0,
   bottom = 0,
   relativeLayerRef,
+  className,
 }) => {
   const relContainerRef = useRef(null);
   const [relativeStyle, setRelativeStyle] = useState({
@@ -31,7 +32,6 @@ const PortalPopup = ({
         case 'Centered':
           style.alignItems = 'stretch';
           style.justifyContent = 'center';
-          style.padding = '0 2rem';
           break;
         case 'Top left':
           style.alignItems = 'flex-start';
@@ -63,6 +63,7 @@ const PortalPopup = ({
   const setPosition = useCallback(() => {
     const relativeItem = relativeLayerRef?.current?.getBoundingClientRect();
     const containerItem = relContainerRef?.current?.getBoundingClientRect();
+
     const style = { opacity: 1 };
     if (relativeItem && containerItem) {
       const {
@@ -94,9 +95,14 @@ const PortalPopup = ({
 
       setRelativeStyle(style);
     } else {
-      style.maxWidth = '95%';
+      style.maxWidth = '60rem';
       style.maxHeight = '85%';
+      style.margin = '0 auto';
       setRelativeStyle(style);
+    }
+    // 检查屏幕宽度是否小于或等于 960px
+    if (window.matchMedia('(max-width: 960px)').matches) {
+      style.margin = '0';
     }
   }, [
     left,
@@ -120,18 +126,23 @@ const PortalPopup = ({
     };
   }, [setPosition]);
 
-  const onOverlayClick = useCallback(
-    (e) => {
-      if (
-        onOutsideClick &&
-        e.target.classList.contains(styles.portalPopupOverlay)
-      ) {
-        onOutsideClick();
-      }
-      e.stopPropagation();
-    },
-    [onOutsideClick]
-  );
+  // const onOverlayClick = useCallback(
+  //   (e) => {
+  //     if (
+  //       onOutsideClick &&
+  //       e.target.classList.contains(styles.portalPopupOverlay)
+  //     ) {
+  //       onOutsideClick();
+  //     }
+  //     e.stopPropagation();
+  //   },
+  //   [onOutsideClick]
+  // );
+  const onOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      onOutsideClick?.();
+    }
+  };
 
   return (
     <Portal>
@@ -140,7 +151,7 @@ const PortalPopup = ({
         style={popupStyle}
         onClick={onOverlayClick}
       >
-        <div ref={relContainerRef} style={relativeStyle}>
+        <div ref={relContainerRef} style={relativeStyle} className={className}>
           {children}
         </div>
       </div>
