@@ -19,8 +19,8 @@ const BookTable = ({ onClose }) => {
   const [time, setTime] = useState('');
   const [address, setAddress] = useState('');
   const [city, setCity] = useState('');
-  const [allergies, setAllergies] = useState('');
-  const [occasion, setOccasion] = useState('');
+  const [allergies, setAllergies] = useState('NA');
+  const [occasion, setOccasion] = useState('NA');
   const [chef, setChef] = useState('');
   const [referer, setReferer] = useState('');
   const [orders, setOrders] = useState('');
@@ -621,10 +621,8 @@ const BookTable = ({ onClose }) => {
                 >
                   <option value=''>Select a city</option>
                   <option value='Houston'>Houston</option>
-                  <option value='San Antonio'>San Antonio</option>
-                  <option value='Dallas' disabled>
-                    Dallas (comming soon)
-                  </option>
+                  <option value='Austin'>Austin</option>
+                  <option value='Dallas'>Dallas</option>
                 </select>
               </div>
               {cityError && <span style={{ color: 'red' }}>({cityError})</span>}

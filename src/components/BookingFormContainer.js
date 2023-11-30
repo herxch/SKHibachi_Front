@@ -26,7 +26,6 @@ const BookingFormContainer = () => {
           <div className={styles.city}>
             <div className={`${styles.cityImage}  ${styles.dallas}`}></div>
             <p>DALLAS</p>
-            <p>(COMING SOON)</p>
           </div>
           <div className={styles.city}>
             <div className={`${styles.cityImage}  ${styles.austin}`}></div>
@@ -40,8 +39,12 @@ const BookingFormContainer = () => {
           </button>
           <div className={styles.contactInfo}>
             <p>Contact us</p>
-            <p>(832)-729-3896</p>
-            <p>skhibachi@gmail.com</p>
+            <p>
+              <a href='tel:+17133200887'>(713)-320-0887</a>
+            </p>
+            <p>
+              <a href='mailto:skhibachi@gmail.com'>skhibachi@gmail.com</a>
+            </p>
           </div>
         </div>
         <SocialMedia />

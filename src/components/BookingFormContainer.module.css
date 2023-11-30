@@ -158,6 +158,14 @@
   font-weight: 700;
   line-height: 2;
 }
+.contactInfo a {
+  color: white; /* 设置字体颜色为白色 */
+  text-decoration: none; /* 去除下划线 */
+}
+
+.contactInfo a:hover {
+  text-decoration: underline; /* 鼠标悬停时添加下划线 */
+}
 
 /* 继续在 Locations.module.css 中添加 */
 .houston {
@@ -166,7 +174,6 @@
 
 .dallas {
   background-image: url(/public/path-to-dallas-image.png);
-  margin-top: 4rem;
 }
 
 .austin {
@@ -206,9 +213,6 @@
     flex-direction: column;
     gap: 1rem;
     margin-top: 2rem;
-  }
-  .dallas {
-    margin: 0;
   }
   .city p {
     font-size: 1.5rem;
