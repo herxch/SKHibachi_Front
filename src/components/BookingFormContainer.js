@@ -1,8 +1,8 @@
-import { useState, useCallback } from 'react';
-import BookTable from './BookTable';
-import PortalPopup from './PortalPopup';
-import styles from './BookingFormContainer.module.css';
-import SocialMedia from './SocialMedia';
+import { useState, useCallback } from "react";
+import BookTable from "./BookTable";
+import PortalPopup from "./PortalPopup";
+import styles from "./BookingFormContainer.module.css";
+import SocialMedia from "./SocialMedia";
 
 const BookingFormContainer = () => {
   const [isBookTablePopupOpen, setBookTablePopupOpen] = useState(false);
@@ -34,16 +34,16 @@ const BookingFormContainer = () => {
         </div>
         <div className={styles.contact}>
           <button className={styles.bookbutton} onClick={openBookTablePopup}>
-            <img className={styles.vectorIcon} alt='' src='/vector2.svg' />
-            <h3 className={styles.bookNow}>Appointment</h3>
+            <img className={styles.vectorIcon} alt="" src="/vector2.svg" />
+            <b className={styles.bookNow}>Appointment</b>
           </button>
           <div className={styles.contactInfo}>
             <p>Contact us</p>
             <p>
-              <a href='tel:+17133200887'>(713)-320-0887</a>
+              <a href="tel:+17133200887">(713)-320-0887</a>
             </p>
             <p>
-              <a href='mailto:skhibachi@gmail.com'>skhibachi@gmail.com</a>
+              <a href="mailto:skhibachi@gmail.com">skhibachi@gmail.com</a>
             </p>
           </div>
         </div>
@@ -51,8 +51,8 @@ const BookingFormContainer = () => {
       </section>
       {isBookTablePopupOpen && (
         <PortalPopup
-          overlayColor='rgba(113, 113, 113, 0.9)'
-          placement='Centered'
+          overlayColor="rgba(113, 113, 113, 0.9)"
+          placement="Centered"
           onOutsideClick={closeBookTablePopup}
         >
           <BookTable onClose={closeBookTablePopup} />
