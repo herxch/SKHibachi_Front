@@ -1,35 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
        <loc>https://www.skhibachi.com/</loc>
        <lastmod>2023-11-30T11:54:43+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
   </url>
    <url>
        <loc>https://www.skhibachi.com/menu</loc>
        <lastmod>2023-11-30T11:54:43+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
   </url>
    <url>
        <loc>https://www.skhibachi.com/gallery</loc>
        <lastmod>2023-11-30T11:54:43+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
   </url>
    <url>
        <loc>https://www.skhibachi.com/about</loc>
        <lastmod>2023-11-30T11:54:43+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
   </url>
    <url>
        <loc>https://www.skhibachi.com/qna</loc>
        <lastmod>2023-11-30T11:54:43+00:00</lastmod>
-       <changefreq>daily</changefreq>
-       <priority>1.0000</priority>
   </url>
 </urlset>
