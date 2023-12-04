@@ -1,0 +1,84 @@
+.logoIcon {
+  width: 10rem;
+}
+.confirmationheading {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+  font-size: inherit;
+  line-height: 140%;
+  font-weight: 700;
+  font-family: inherit;
+}
+.ourCustomerServise {
+  display: block;
+}
+.confirmationcontent,
+.gotIt {
+  margin: 0;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  line-height: 140%;
+  font-weight: 700;
+}
+.confirmationcontent {
+  align-self: stretch;
+  color: #928b8b;
+}
+.gotIt {
+  font-family: var(--px-regular);
+  color: var(--common-0-white);
+  text-align: center;
+}
+.bookingconfirm,
+.gotit {
+  border-radius: var(--br-31xl);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.gotit {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xs) var(--padding-base);
+  background-color: var(--color-crimson-100);
+  width: 120px;
+  flex-direction: row;
+  justify-content: center;
+}
+.bookingconfirm {
+  background-color: var(--common-0-white);
+  /* width: 474px; */
+  /* height: 613px; */
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  gap: 3rem;
+  min-width: 300px;
+  max-width: 700px;
+  max-height: 100%;
+  overflow: auto;
+  text-align: center;
+  font-size: var(--font-size-13xl);
+  color: var(--color-gray-100);
+  font-family: var(--px-regular);
+}
+@media screen and (max-width: 960px) {
+  .confirmationheading {
+    font-size: var(--font-size-5xl);
+  }
+  .confirmationcontent,
+  .gotIt {
+    font-size: var(--px-regular-size);
+  }
+  .gotit {
+    padding-left: var(--padding-base);
+    box-sizing: border-box;
+  }
+  .bookingconfirm {
+    gap: var(--gap-13xl);
+    width: 90%;
+    margin: 0 auto;
+  }
+}
