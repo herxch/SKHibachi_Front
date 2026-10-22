@@ -1,81 +1,48 @@
-/* styles.module.css */
-.aboutWrapper {
-  background-image: url(/public/pricesection@3x.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 或者其他对齐方式 */
-  justify-content: center; /* 根据需要调整 */
-  gap: 10rem;
-  padding: 6rem 0;
+.chapters {
+  display: grid;
+  gap: clamp(72px, 10vw, 128px);
 }
 
-.leftContentContainer,
-.rightContentContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: center; /* 或者其他对齐方式 */
-  justify-content: center; /* 根据需要调整 */
-  gap: 5rem;
+.chapter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 6vw, 88px);
+  align-items: center;
 }
 
-.leftImage,
-.rightImage {
-  border-radius: 50px;
-  max-width: 40rem;
+.flip .media {
+  order: 2;
+}
+
+.media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 10 / 7;
+  box-shadow: var(--shadow-lg);
+}
+
+.media img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.leftContent,
-.rightContent {
-  width: 90%;
+.copy {
+  display: grid;
+  gap: 18px;
 }
 
-.rightImage {
-  order: 2; /* 确保在宽屏时图片在右边 */
+.copy p {
+  color: var(--muted);
+  font-size: 1.06rem;
 }
 
-.leftContent {
-  order: 1; /* 确保在宽屏时内容在左边 */
-}
-.leftImage {
-  order: 1; /* 确保在宽屏时图片在右边 */
-}
-
-.rightContent {
-  order: 2; /* 确保在宽屏时内容在左边 */
-}
-
-/* 媒体查询，当屏幕宽度小于960px时 */
-@media (max-width: 1200px) {
-  .leftContentContainer,
-  .rightContentContainer {
-    flex-direction: column-reverse;
-    width: 95%;
-    gap: 2rem;
+@media (max-width: 860px) {
+  .chapter {
+    grid-template-columns: 1fr;
   }
 
-  .leftImage,
-  .rightImage,
-  .leftContent,
-  .rightContent {
-    order: unset; /* 重置顺序 */
-  }
-  .aboutWrapper {
-    gap: 2rem;
-    padding: 3rem 0 0 0;
-  }
-  .leftImage,
-  .rightImage {
-    width: 90%;
-  }
-  .leftContent,
-  .rightContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .flip .media {
+    order: 0;
   }
 }

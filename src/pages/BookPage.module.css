@@ -1,0 +1,93 @@
+.page {
+  padding-top: calc(var(--header-h) + clamp(40px, 6vw, 80px));
+  padding-bottom: var(--section-y);
+  background:
+    radial-gradient(60% 60% at 0% 0%, rgba(226, 85, 47, 0.14), transparent 70%),
+    var(--ink);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    'intro form'
+    'details form';
+  column-gap: clamp(32px, 5vw, 72px);
+  row-gap: 28px;
+  align-items: start;
+}
+
+.intro {
+  grid-area: intro;
+  display: grid;
+  gap: 20px;
+}
+
+.formCol {
+  grid-area: form;
+  scroll-margin-top: calc(var(--header-h) + 16px);
+  min-width: 0;
+}
+
+.details {
+  grid-area: details;
+  display: grid;
+  gap: 20px;
+}
+
+.points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.points li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.points svg {
+  color: var(--ember);
+  flex-shrink: 0;
+}
+
+.contact {
+  display: grid;
+  gap: 8px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.contact p {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 960px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-template-areas:
+      'intro'
+      'form'
+      'details';
+    row-gap: 32px;
+  }
+}

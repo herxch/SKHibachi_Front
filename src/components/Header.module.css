@@ -1,0 +1,166 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.solid {
+  background: rgba(15, 13, 11, 0.92);
+  backdrop-filter: saturate(140%) blur(12px);
+  border-bottom-color: var(--line);
+}
+
+.bar {
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: -0.01em;
+  flex-shrink: 0;
+}
+
+.brand img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.nav {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.link {
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: var(--text);
+}
+
+.active {
+  color: var(--text);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.phone:hover {
+  color: var(--gold);
+}
+
+.toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  background: transparent;
+  cursor: pointer;
+}
+
+.drawer {
+  display: none;
+}
+
+@media (max-width: 1080px) {
+  .phone {
+    display: none;
+  }
+}
+
+@media (max-width: 880px) {
+  .nav {
+    display: none;
+  }
+
+  .actions {
+    margin-left: auto;
+    gap: 10px;
+  }
+
+  .toggle {
+    display: inline-flex;
+  }
+
+  .drawer {
+    display: block;
+    position: fixed;
+    inset: var(--header-h) 0 0 0;
+    background: var(--ink);
+    padding-top: 24px;
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .drawer[hidden] {
+    display: none;
+  }
+
+  .drawerOpen {
+    opacity: 1;
+  }
+
+  .drawerLink {
+    display: block;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    text-decoration: none;
+  }
+
+  .drawerLink[aria-current='page'] {
+    color: var(--gold);
+  }
+
+  .drawerFoot {
+    display: grid;
+    gap: 12px;
+    margin-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 420px) {
+  .brand span {
+    display: none;
+  }
+}

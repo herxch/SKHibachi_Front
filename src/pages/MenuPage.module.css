@@ -1,87 +1,121 @@
-.menuWrapper {
-  background-image: url(/public/menubg.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 或者其他对齐方式 */
-  justify-content: center; /* 根据需要调整 */
-  gap: 10rem;
-  padding: 6rem 0;
-}
-.span2 {
-  font-weight: 800;
-  font-family: var(--px-regular);
-}
-.minimumForAllParties {
-  display: block;
-}
-.lobsterTail {
-  font-family: var(--px-regular);
-}
-.minimumForAllContainer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 2rem;
-  line-height: 1.6;
-  color: white;
-  font-weight: 700;
-}
-.howItWorks {
-  text-align: center;
-  color: white;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  font-size: 2.5rem;
-}
-.contentWrapper {
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;
-  width: 95%;
-  justify-content: center;
+.split {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(32px, 6vw, 80px);
   align-items: center;
 }
 
-.video {
-  max-width: 30rem;
+.listTitle {
+  margin-top: 32px;
+  margin-bottom: 14px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
-.leftContent,
-.rightContent {
-  max-width: 50rem;
+.checklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.checklist li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--muted);
+}
+
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--ember);
+}
+
+.videos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.videos video {
   width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  background: var(--ink-3);
 }
 
-.rightContent {
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
-  justify-content: center;
-  align-items: center;
+.videos video:last-child {
+  margin-top: 48px;
+}
+
+/* Five cards: three across, then two wider ones underneath. */
+.policies {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+}
+
+.policy {
+  grid-column: span 2;
+}
+
+.policy:nth-child(n + 4) {
+  grid-column: span 3;
+}
+
+.policy {
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  background: var(--ink);
+}
+
+.policy h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.policy p {
+  color: var(--muted);
+  font-size: 0.97rem;
 }
 
 @media (max-width: 960px) {
-  .contentWrapper {
-    flex-direction: column;
-    width: 95%;
-    gap: 3rem;
-  }
-  .minimumForAllContainer {
-    font-size: 1rem;
-  }
-  .howItWorks {
-    font-size: 1.5rem;
+  .split {
+    grid-template-columns: 1fr;
   }
 
-  .menuWrapper {
-    gap: 0;
-    padding: 1rem 0;
+  .policies {
+    grid-template-columns: 1fr 1fr;
   }
 
-  .rightContent {
-    gap: 1rem;
+  .policy,
+  .policy:nth-child(n + 4) {
+    grid-column: auto;
+  }
+
+  .policy:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .policies {
+    grid-template-columns: 1fr;
+  }
+
+  .videos video:last-child {
+    margin-top: 32px;
   }
 }

@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
 
-Sitemap: https://skhibachi.com/sitemap.xml
+Sitemap: https://www.skhibachi.com/sitemap.xml
